@@ -1,5 +1,55 @@
-.title {
+@import url("https://fonts.googleapi.com/css?family=Gluten|Ubuntu");
+.Top {
+  margin: auto;
   text-align: center;
+  font-family: "Gluten", cursive;
   color: aqua;
+}
+
+.Dropdown {
+  position: relative;
+  left: 1225px;
+  bottom: 100px;
+  display: inline-block;
+}
+
+.Dropdown .DropdownButton {
+  border-radius: 15px;
+  background-color: crimson;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.Dropdown .DropdownButton:hover, .Dropdown .DropdownButton:focus {
+  background-color: #bf143c;
+}
+
+.Dropdown .DropdownContent {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 106px;
+  -webkit-box-shadow: 0px, 8px, 16px, 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px, 8px, 16px, 0px rgba(0, 0, 0, 0.2);
+}
+
+.Dropdown .DropdownContent #MainDropdown {
+  z-index: 1;
+}
+
+.Dropdown .DropdownContent a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  display: block;
+}
+
+.Dropdown .DropdownContent a:hover {
+  background-color: #ddd;
 }
 /*# sourceMappingURL=Home.module.css.map */
