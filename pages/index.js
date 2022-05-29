@@ -15,7 +15,7 @@ export default function Home(){
             <button className={styles.DropdownButton}>Main Menu</button>
             <div id={styles.MainDropdown} className={styles.DropdownContent}>
                 <a href='#'>1</a>
-                <a href='#'>2</a>
+                <a href='#'>2</a>       
                 <a href='#'>3</a>
             </div>
         </div> */}
