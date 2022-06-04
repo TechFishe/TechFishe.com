@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.Button{
+    width: 200px;
+    height: 50px;
+    font-size: 40px;
+    border-radius: 15px;
+    border-width: 3px;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    &:hover{
+        // background-color: #b8b8b8;
+        transform: scale(1.125);
+    }
+}
