@@ -5,8 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './Pages/home/home.component';
-import { AboutMeComponent } from './Pages/about-me/about-me.component';
+// import { HomeComponent } from './Pages/home/home.component';
+// import { AboutMeComponent } from './Pages/about-me/about-me.component';
 import { GamesComponent } from './Pages/games/games.component';
 
 import { MatButtonModule } from '@angular/material/button';
@@ -16,7 +16,7 @@ import { MatMenuModule } from '@angular/material/menu';
 // import { MatTooltip } from '@angular/material/tooltip';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, AboutMeComponent, GamesComponent],
+  declarations: [AppComponent, GamesComponent],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, MatButtonModule, MatIconModule, MatToolbarModule, MatMenuModule],
   providers: [],
   bootstrap: [AppComponent]
