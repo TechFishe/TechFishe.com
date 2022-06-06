@@ -6,6 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './Pages/home/home.component';
 import { AboutMeComponent } from './Pages/about-me/about-me.component';
 import { WildCardComponent } from './Pages/wild-card/wild-card.component';
+import { GamesComponent } from './Pages/games/games.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,11 @@ const routes: Routes = [
     path: 'About-Me',
     title: 'About Me',
     component: AboutMeComponent
+  },
+  {
+    path: 'Games',
+    title: 'Games',
+    component: GamesComponent
   },
   {
     path: '',

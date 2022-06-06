@@ -1,4 +1,15 @@
 <!-- Copyright (c) TechFishe 2022 -->
 
+<mat-toolbar color="primary">
+    <span>TechFishe.com</span>
+    <span class="Spacer"></span>
+    <button mat-mini-fab color="accent" [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
+    <mat-menu #menu="matMenu">
+        <a href="https://techfishe-website-d1acf.web.app/Home"><button mat-menu-item>Home</button></a>
+        <a href="https://techfishe-website-d1acf.web.app/About-Me"><button mat-menu-item>About Me</button></a>
+        <a href="https://techfishe-website-d1acf.web.app/Games"><button mat-menu-item>Games</button></a>
+    </mat-menu>
+</mat-toolbar>
+
 <p>💙 Copyright (c) TechFishe 2022 <img src="assets/Images/Bi-Flag.png" alt="Flag"></p>
 <router-outlet></router-outlet>
