@@ -5,10 +5,18 @@
     <span class="Spacer"></span>
     <button mat-mini-fab color="accent" [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
     <mat-menu #menu="matMenu">
-        <a href="https://techfishe-website-d1acf.web.app/Home"><button mat-menu-item>Home</button></a>
-        <a href="https://techfishe-website-d1acf.web.app/About-Me"><button mat-menu-item>About Me</button></a>
-        <a href="https://techfishe-website-d1acf.web.app/Games"><button mat-menu-item>Games</button></a>
+        <a href="https://techfishe-website-d1acf.web.app/Home"><button mat-menu-item><mat-icon>home</mat-icon>Home</button></a>
+        <a href="https://techfishe-website-d1acf.web.app/About-Me"><button mat-menu-item><mat-icon>emoji_people</mat-icon>About</button></a>
+        <!-- <a href="https://techfishe-website-d1acf.web.app/Games"><button mat-menu-item><mat-icon>videogame_asset</mat-icon>Games</button></a> -->
+        <!-- <button mat-menu-item [matMenuTriggerFor]="social"><mat-icon>contacts</mat-icon>Social Media</button> -->
+        <a href="https://github.com/TechFishe/TechFishe.com" target="_blank"><button mat-menu-item><mat-icon>source</mat-icon>Source Code</button></a>
     </mat-menu>
+    <!-- <mat-menu #social="matMenu">
+        <a href="#" target="_blank"><button mat-menu-item><mat-icon>snapchat</mat-icon>Snap</button></a>
+        <a href="#" target="_blank"><button mat-menu-item><mat-icon>discord</mat-icon>Discord</button></a>
+        <a href="https://www.youtube.com/channel/UCX-UlotuuOHp1dxHJNtngXw" target="_blank"><button mat-menu-item><mat-icon>video_file</mat-icon>YouTube</button></a>
+        <a href="https://www.twitch.tv/techfishe" target="_blank"><button mat-menu-item><mat-icon>live_tv</mat-icon>Twitch</button></a>
+    </mat-menu> -->
 </mat-toolbar>
 
 <p>💙 Copyright (c) TechFishe 2022 <img src="assets/Images/Bi-Flag.png" alt="Flag"></p>

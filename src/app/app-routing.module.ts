@@ -4,9 +4,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './Pages/home/home.component';
-import { AboutMeComponent } from './Pages/about-me/about-me.component';
+import { AboutComponent } from './Pages/about/about.component';
 import { WildCardComponent } from './Pages/wild-card/wild-card.component';
-import { GamesComponent } from './Pages/games/games.component';
+//import { GamesComponent } from './Pages/games/games.component';
 
 const routes: Routes = [
   {
@@ -15,15 +15,15 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'About-Me',
-    title: 'About Me',
-    component: AboutMeComponent
+    path: 'About',
+    title: 'About',
+    component: AboutComponent
   },
-  {
-    path: 'Games',
-    title: 'Games',
-    component: GamesComponent
-  },
+  // {
+  //   path: 'Games',
+  //   title: 'Games',
+  //   component: GamesComponent
+  // },
   {
     path: '',
     redirectTo: '/Home',
