@@ -31,7 +31,7 @@ Here are some importand directories you will want to know about. Most of the stu
     The assets folder currently holds all of the images that I need to access for the site. Right now it´s just the bi flag that goes with the copyright text, but any new images should be placed in here. They could technically sit anywhere in the project, but this is just a way to organize them.
     >:crystal_ball: For the future, any new assets like fonts, backgrounds, UI stuff, etc. should be placed in the assets folder with a sub-folder with the name of items that will be refferenced there (example, assets/UI/UI-Stuff-Goes-Here)
 
-    >:blue_notebook: Please note, anything that will be needed at build time that is in the assets folder like images need to be refferenced like this: `<img src="assets/path-to-item" alt="name">`. This is to ensure that it is included by Angular at build time.
+    >:blue_book: Please note, anything that will be needed at build time that is in the assets folder like images need to be refferenced like this: `<img src="assets/path-to-item" alt="name">`. This is to ensure that it is included by Angular at build time.
 * ### Everything else
     * The [styles.scss](src/styles.scss) holds all the global .scss that will apply to anything in the website. It is important to note that anything in the styles.scss will overrule anything in any other .scss file, so be very careful what goes in there. 
     
