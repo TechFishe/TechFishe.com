@@ -1,5 +1,5 @@
 # [TechFishe.com](https://techfishe-website-d1acf.web.app) :blue_heart: :wave:
-This is the source code for my website [TechFishe.com](https://techfishe-website-d1acf.web.app/Home). I made it using Angular & host it using Firebase.
+This is the source code for my website [TechFishe.com](https://techfishe-website-d1acf.web.app/Home). I made it using [Angular](https://angular.io) & host it using [Firebase](https://firebase.google.com).
 This README.md file will walk you through how the directories work, how I added routing, and what some of the different components are. 
 
 >:warning: I am very bad at writing/explaining stuff, so this is probably going to be very bad. I recommend downloading the project on your own machine and looking through the files there to try and understand what is going on.
