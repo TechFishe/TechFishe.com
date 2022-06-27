@@ -2,6 +2,13 @@
 
 .Spacer{flex: 1 1 auto;}
 
+nav{
+    #SocialBtn{
+        position: relative;
+        right: 10px;
+    }
+}
+
 p{
     position: fixed;
     bottom: 0;

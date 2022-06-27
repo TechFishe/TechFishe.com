@@ -1,26 +1,24 @@
 <!-- Copyright (c) TechFishe 2022 -->
 
-<mat-toolbar color="primary">
+<mat-toolbar color="accent">
     <span>TechFishe.com</span>
     <span class="Spacer"></span>
-    <button mat-mini-fab color="accent" [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
-    <mat-menu #menu="matMenu">
-        <a href="https://techfishe-website-d1acf.web.app/Home"><button mat-menu-item><mat-icon>home</mat-icon>Home</button></a>
-        <a href="https://techfishe-website-d1acf.web.app/About"><button mat-menu-item><mat-icon>emoji_people</mat-icon>About</button></a>
-        <!-- <a href="https://techfishe-website-d1acf.web.app/Games"><button mat-menu-item><mat-icon>videogame_asset</mat-icon>Games</button></a> -->
-        <!-- <button mat-menu-item [matMenuTriggerFor]="social"><mat-icon>contacts</mat-icon>Social Media</button> -->
-        <!-- <button mat-menu-item [matMenuTriggerFor]="websites"><mat-icon>language</mat-icon>My Websites</button> -->
-        <a href="https://github.com/TechFishe/TechFishe.com" target="_blank"><button mat-menu-item><mat-icon>source</mat-icon>Source Code</button></a>
-    </mat-menu>
-    <!-- <mat-menu #websites="matMenu">
-        <a href="#" target="_blank"><button mat-menu-item>HAST Website</button></a>
-    </mat-menu> -->
-    <!-- <mat-menu #social="matMenu">
-        <a href="#" target="_blank"><button mat-menu-item><mat-icon>snapchat</mat-icon>Snap</button></a>
-        <a href="#" target="_blank"><button mat-menu-item><mat-icon>discord</mat-icon>Discord</button></a>
-        <a href="https://www.youtube.com/channel/UCX-UlotuuOHp1dxHJNtngXw" target="_blank"><button mat-menu-item><mat-icon>video_file</mat-icon>YouTube</button></a>
-        <a href="https://www.twitch.tv/techfishe" target="_blank"><button mat-menu-item><mat-icon>live_tv</mat-icon>Twitch</button></a>
-    </mat-menu> -->
+    <nav>
+        <button mat-raised-button color="warn" [mat-menu-trigger-for]="Social" id="SocialBtn"><mat-icon>people_outline</mat-icon>Social Media</button>
+        <mat-menu #Social="matMenu">
+            <!-- <a href="#" target="_blank"><button mat-menu-item><mat-icon>snapchat</mat-icon>Snap</button></a>
+            <a href="#" target="_blank"><button mat-menu-item><mat-icon>discord</mat-icon>Discord</button></a> -->
+            <a href="https://www.youtube.com/channel/UCX-UlotuuOHp1dxHJNtngXw" target="_blank"><button mat-menu-item><mat-icon>video_file</mat-icon>YouTube</button></a>
+            <a href="https://www.twitch.tv/techfishe" target="_blank"><button mat-menu-item><mat-icon>live_tv</mat-icon>Twitch</button></a>
+        </mat-menu>
+        <button mat-raised-button color="warn" [matMenuTriggerFor]="MainMenu"><mat-icon>menu</mat-icon>Main Menu</button>
+        <mat-menu #MainMenu="matMenu">
+            <a routerLink="/Home"><button mat-menu-item><mat-icon>home</mat-icon>Home</button></a>
+            <a routerLink="/About"><button mat-menu-item><mat-icon>emoji_people</mat-icon>About</button></a>
+            <!-- <a routerLink="/Games"><button mat-menu-item><mat-icon>videogame_asset</mat-icon>Games</button></a> -->
+            <a href="https://github.com/TechFishe/TechFishe.com" target="_blank"><button mat-menu-item><mat-icon>source</mat-icon>Source Code</button></a>
+        </mat-menu>
+    </nav>
 </mat-toolbar>
 
 <p>💙 Copyright (c) TechFishe 2022 <img src="assets/Images/Bi-Flag.png" alt="Flag"></p>

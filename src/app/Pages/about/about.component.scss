@@ -3,4 +3,12 @@
 main{
     text-align: center;
     h1{font-weight: bold;}
+    img{
+        position: relative;
+        bottom: 270px;
+        float: left;
+        border-radius: 15px;
+        padding-top: 5px;
+        padding-left: 5px;
+    }
 }

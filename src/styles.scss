@@ -1,11 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
+// #region Color theme code
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$TechFishe-primary: mat.define-palette(mat.$gray-palette, 50);
+$TechFishe-accent: mat.define-palette(mat.$gray-palette, 800);
+$TechFishe-warn: mat.define-palette(mat.$cyan-palette, A200);
+
+$TechFishe-theme: mat.define-light-theme((
+  color: (
+    primary: $TechFishe-primary,
+    accent: $TechFishe-accent,
+    warn: $TechFishe-warn,
+  )
+));
+
+@include mat.all-component-themes($TechFishe-theme);
+// #endregion
+
+html, body {
+    height: 100%;
+    background-color: white;
+}
 body{
     padding: 0;
     margin: 0;
     overflow-x: hidden;
     overflow-y: visible;
-    // font-family: 'Poppins', sans-serif;
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
