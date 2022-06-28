@@ -5,24 +5,37 @@
 
 @include mat.core();
 
-$TechFishe-primary: mat.define-palette(mat.$gray-palette, 50);
-$TechFishe-accent: mat.define-palette(mat.$gray-palette, 800);
-$TechFishe-warn: mat.define-palette(mat.$cyan-palette, A200);
+// $TechFishe-Light-Primary: mat.define-palette(mat.$gray-palette, 50);
+// $TechFishe-Light-Accent: mat.define-palette(mat.$gray-palette, 800);
 
-$TechFishe-theme: mat.define-light-theme((
+$TechFishe-Dark-Primary: mat.define-palette(mat.$gray-palette, 800);
+$TechFishe-Dark-Accent: mat.define-palette(mat.$gray-palette, 900);
+
+$TechFishe-Warn: mat.define-palette(mat.$cyan-palette, A200);
+
+// $TechFishe-Theme-Light: mat.define-light-theme((
+//   color: (
+//     primary: $TechFishe-Light-Primary,
+//     accent: $TechFishe-Light-Accent,
+//     warn: $TechFishe-Warn,
+//   )
+// ));
+
+$TechFishe-Theme-Dark: mat.define-dark-theme((
   color: (
-    primary: $TechFishe-primary,
-    accent: $TechFishe-accent,
-    warn: $TechFishe-warn,
+    primary: $TechFishe-Dark-Primary,
+    accent: $TechFishe-Dark-Accent,
+    warn: $TechFishe-Warn,
   )
 ));
 
-@include mat.all-component-themes($TechFishe-theme);
+@include mat.all-component-themes($TechFishe-Theme-Dark);
 // #endregion
 
 html, body {
     height: 100%;
-    background-color: white;
+    background-color: #424242;
+    color: white;
 }
 body{
     padding: 0;
