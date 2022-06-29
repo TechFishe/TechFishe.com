@@ -1,11 +1,11 @@
-# [TechFishe.com](https://techfishe-website-d1acf.web.app) :blue_heart: :wave:
-This is the source code for my website [TechFishe.com](https://techfishe-website-d1acf.web.app/Home). I made it using [Angular](https://angular.io) & host it using [Firebase](https://firebase.google.com).
+# [TechFishe.com](https://techfishe-website-d1acf.web.app){:target="_blank"} :blue_heart: :wave:
+This is the source code for my website [TechFishe.com](https://techfishe-website-d1acf.web.app/Home){:target="_blank"}. I made it using [Angular](https://angular.io){:target="_blank"} & host it using [Firebase](https://firebase.google.com){:target="_blank"}.
 This README.md file will walk you through how the directories work, how I added routing, and what some of the different components are. 
 
 >:warning: I am very bad at writing/explaining stuff, so this is probably going to be very bad. I recommend downloading the project on your own machine and looking through the files there to try and understand what is going on.
 
 # Packages
-Currently I am using [Angular Material](https://material.angular.io) to do the heavy lifting of the UI. I'm using a custom White-Gray-Auqa color theme but they have some really cool built-in ones. It´s super easy to work with and if you are wanting to quickly make a webiste using Angular/am bad with UIs, I suggest checking them out. **#NotSponored**
+Currently I am using [Angular Material](https://material.angular.io){:target="_blank"} to do the heavy lifting of the UI. I'm using a custom White-Gray-Auqa color theme but they have some really cool built-in ones. It´s super easy to work with and if you are wanting to quickly make a webiste using Angular/am bad with UIs, I suggest checking them out. **#NotSponored**
 
 # Directories
 Here are some importand directories you will want to know about. Most of the stuff outside of the [src](src/) folder is mostly just for Angular and Firebase config. Inside of the src however, their are a lot of files and folders we need to look at. I´ve split them up into different secitons so you can find what you´re looking for.
