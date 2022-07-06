@@ -10,7 +10,7 @@ Currently I am using [Angular Material](https://material.angular.io) to do the h
 # Directories
 Here are some importand directories you will want to know about. Most of the stuff outside of the [src](src/) folder is mostly just for Angular and Firebase config. Inside of the src however, their are a lot of files and folders we need to look at. I´ve split them up into different secitons so you can find what you´re looking for.
 * ## [src](src/)
-    This holds all of the main files for running the website. Some important ones to note are [index.html](src/index.html), [favicon.ico](src/favicon.ico) and [styles.scss](src/styles.scss). Some super important folder to look at are app and assets.
+    This holds all of the main files for running the website. Some important ones to note are [index.html](src/index.html) and [styles.scss](src/styles.scss). Some super important folders to look at are app and assets.
 * ### [app](src/app/)
     This is the main folder for the app. It holds all of the code to render out what you see on the web page and routing. Lets have a look through this massive folder.
     #### [Pages](src/app/Pages/)
