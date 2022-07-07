@@ -3,13 +3,17 @@
 main{
     text-align: center;
     h1{font-weight: bold;}
-    img{
+    #DesktopImg{
         position: relative;
         bottom: 270px;
         float: left;
         border-radius: 15px;
         padding-top: 5px;
         padding-left: 5px;
+    }
+    #MobileImg{
+        padding-top: 5px;
+        padding-bottom: 5px;
     }
     a{
         color: #18FFFF;

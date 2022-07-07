@@ -3,22 +3,32 @@
 <mat-toolbar color="accent">
     <span>TechFishe.com</span>
     <span class="Spacer"></span>
-    <nav>
-        <button mat-raised-button color="warn" [mat-menu-trigger-for]="Social" id="SocialBtn" matTooltip="My Social Media!"><mat-icon>people_outline</mat-icon>Social Media</button>
-        <mat-menu #Social="matMenu">
-            <!-- <a href="#" target="_blank"><button mat-menu-item><mat-icon>snapchat</mat-icon>Snap</button></a>
-            <a href="#" target="_blank"><button mat-menu-item><mat-icon>discord</mat-icon>Discord</button></a> -->
-            <a href="https://www.youtube.com/channel/UCX-UlotuuOHp1dxHJNtngXw" target="_blank"><button mat-menu-item matTooltip="My YouTube Channel!" matTooltipPosition="before"><mat-icon>video_file</mat-icon>YouTube</button></a>
-            <a href="https://www.twitch.tv/techfishe" target="_blank"><button mat-menu-item matTooltip="My Twitch Channel!" matTooltipPosition="before"><mat-icon>live_tv</mat-icon>Twitch</button></a>
-        </mat-menu>
-        <button mat-raised-button color="warn" [matMenuTriggerFor]="MainMenu" matTooltip="Main Menu!"><mat-icon>menu</mat-icon>Main Menu</button>
+    <div *ngIf="IsDesktop">
+        <nav>
+            <button mat-raised-button color="warn" [mat-menu-trigger-for]="Social" id="SocialBtn" matTooltip="My Social Media!"><mat-icon>people_outline</mat-icon>Social Media</button>
+            <mat-menu #Social="matMenu">
+                <!-- <a href="#" target="_blank"><button mat-menu-item><mat-icon>snapchat</mat-icon>Snap</button></a>
+                <a href="#" target="_blank"><button mat-menu-item><mat-icon>discord</mat-icon>Discord</button></a> -->
+                <a href="https://www.youtube.com/channel/UCX-UlotuuOHp1dxHJNtngXw" target="_blank"><button mat-menu-item matTooltip="My YouTube Channel!" matTooltipPosition="before"><mat-icon>video_file</mat-icon>YouTube</button></a>
+                <a href="https://www.twitch.tv/techfishe" target="_blank"><button mat-menu-item matTooltip="My Twitch Channel!" matTooltipPosition="before"><mat-icon>live_tv</mat-icon>Twitch</button></a>
+            </mat-menu>
+            <button mat-raised-button color="warn" [matMenuTriggerFor]="MainMenu" matTooltip="Main Menu!"><mat-icon>menu</mat-icon>Main Menu</button>
+            <mat-menu #MainMenu="matMenu">
+                <a routerLink="/Home"><button mat-menu-item matTooltip="Home Page!" matTooltipPosition="before"><mat-icon>home</mat-icon>Home</button></a>
+                <a routerLink="/About"><button mat-menu-item matTooltip="About Page!" matTooltipPosition="before"><mat-icon>emoji_people</mat-icon>About</button></a>
+                <!-- <a routerLink="/Games"><button mat-menu-item><mat-icon>videogame_asset</mat-icon>Games</button></a> -->
+                <a href="https://github.com/TechFishe/TechFishe.com" target="_blank"><button mat-menu-item matTooltip="Source Code!" matTooltipPosition="before"><mat-icon>source</mat-icon>Source Code</button></a>
+            </mat-menu>
+        </nav>
+    </div>
+    <div *ngIf="IsMobile">
+        <button mat-mini-fab color="warn" [mat-menu-trigger-for]="MainMenu"><mat-icon>menu</mat-icon></button>
         <mat-menu #MainMenu="matMenu">
-            <a routerLink="/Home"><button mat-menu-item matTooltip="Home Page!" matTooltipPosition="before"><mat-icon>home</mat-icon>Home</button></a>
-            <a routerLink="/About"><button mat-menu-item matTooltip="About Page!" matTooltipPosition="before"><mat-icon>emoji_people</mat-icon>About</button></a>
-            <!-- <a routerLink="/Games"><button mat-menu-item><mat-icon>videogame_asset</mat-icon>Games</button></a> -->
-            <a href="https://github.com/TechFishe/TechFishe.com" target="_blank"><button mat-menu-item matTooltip="Source Code!" matTooltipPosition="before"><mat-icon>source</mat-icon>Source Code</button></a>
+            <a routerLink="/Home"><button mat-menu-item><mat-icon>home</mat-icon>Home</button></a>
+            <a routerLink="/About"><button mat-menu-item><mat-icon>emoji_people</mat-icon>About</button></a>
+            <a href="https://github.com/TechFishe/TechFishe.com" target="_blank"><button mat-menu-item><mat-icon>source</mat-icon>Source Code</button></a>
         </mat-menu>
-    </nav>
+    </div>
 </mat-toolbar>
 
 <p>💙 Copyright (c) TechFishe 2022 <img src="assets/Images/Bi-Flag.png" alt="Flag"></p>
