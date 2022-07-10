@@ -7,8 +7,7 @@
         <nav>
             <button mat-raised-button color="warn" [mat-menu-trigger-for]="Social" id="SocialBtnDesktop" matTooltip="My Social Media!"><mat-icon>people_outline</mat-icon>Social Media</button>
             <mat-menu #Social="matMenu">
-                <!-- <a href="#" target="_blank"><button mat-menu-item><mat-icon>snapchat</mat-icon>Snap</button></a>
-                <a href="#" target="_blank"><button mat-menu-item><mat-icon>discord</mat-icon>Discord</button></a> -->
+                <!-- <a href="#" target="_blank"><button mat-menu-item><mat-icon>discord</mat-icon>Discord</button></a> -->
                 <a href="https://www.youtube.com/channel/UCX-UlotuuOHp1dxHJNtngXw" target="_blank"><button mat-menu-item matTooltip="My YouTube Channel!" matTooltipPosition="before"><mat-icon>video_file</mat-icon>YouTube</button></a>
                 <a href="https://www.twitch.tv/techfishe" target="_blank"><button mat-menu-item matTooltip="My Twitch Channel!" matTooltipPosition="before"><mat-icon>live_tv</mat-icon>Twitch</button></a>
             </mat-menu>
@@ -22,13 +21,12 @@
         </nav>
     </div>
     <div *ngIf="IsMobile">
-        <button mat-mini-fab color="warn" [mat-menu-trigger-for]="Social" id="SocialBtnMobile"><mat-icon>people_outline</mat-icon></button>
+        <!-- <button mat-mini-fab color="warn" [mat-menu-trigger-for]="Social"><mat-icon>people_outline</mat-icon></button>
             <mat-menu #Social="matMenu">
-                <!-- <a href="#" target="_blank"><button mat-menu-item><mat-icon>snapchat</mat-icon>Snap</button></a>
-                <a href="#" target="_blank"><button mat-menu-item><mat-icon>discord</mat-icon>Discord</button></a> -->
+                <a href="#" target="_blank"><button mat-menu-item><mat-icon>discord</mat-icon>Discord</button></a>
                 <a href="https://www.youtube.com/channel/UCX-UlotuuOHp1dxHJNtngXw" target="_blank"><button mat-menu-item><mat-icon>video_file</mat-icon>YouTube</button></a>
                 <a href="https://www.twitch.tv/techfishe" target="_blank"><button mat-menu-item><mat-icon>live_tv</mat-icon>Twitch</button></a>
-            </mat-menu>
+            </mat-menu> -->
         <button mat-mini-fab color="warn" [mat-menu-trigger-for]="MainMenu"><mat-icon>menu</mat-icon></button>
         <mat-menu #MainMenu="matMenu">
             <a routerLink="/Home"><button mat-menu-item><mat-icon>home</mat-icon>Home</button></a>
