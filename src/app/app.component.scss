@@ -3,9 +3,13 @@
 .Spacer{flex: 1 1 auto;}
 
 nav{
-    #SocialBtn{
+    #SocialBtnDesktop{
         position: relative;
         right: 10px;
+    }
+    #SocialBtnMobile{
+        position: relative;
+        right: 20px;
     }
 }
 
