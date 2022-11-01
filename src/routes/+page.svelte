@@ -24,6 +24,13 @@
             {/if}
         </button>
     </nav>
+    <div class="h-screen w-56 bg-gray-200 dark:bg-gray-700">
+        <button class="absolute left-56 animate-bounce-side top-2/4 flex p-2 rounded-full text-gray-800 dark:text-gray-50 hover:scale-110 hover:bg-gray-300 dark:hover:bg-gray-700 hover:shadow-md transition ease-in-out duration-300 hover:delay-100">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>              
+        </button>
+    </div>
     <main class="bg-gray-50 dark:bg-gray-800 flex w-screen place-content-center">
         <div class="self-center grid grid-cols-1 gap-1">
             <button class="text-gray-800 dark:text-gray-50 flex space-x-1 justify-center bg-fuchsia-500 rounded-md p-2 text-lg shadow-md shadow-fuchsia-500/50 hover:shadow-lg hover:bg-fuchsia-600 hover:shadow-fuchsia-600/50 hover:scale-105 transition ease-in-out duration-300 delay-100" on:click={() => count++}>
