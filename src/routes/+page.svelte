@@ -4,6 +4,10 @@
     let count: number = 0;
 </script>
 
+<svelte:head>
+    <title>TechFishe.com | Home</title>
+</svelte:head>
+
 <div class:dark="{$isDark === true}" class="dark flex w-screen h-screen">
     <main class="bg-gray-50 dark:bg-gray-800 flex w-screen place-content-center">
         <div class="self-center grid grid-cols-1 gap-1">
