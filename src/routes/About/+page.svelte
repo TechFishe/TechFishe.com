@@ -1,13 +1,11 @@
-<script lang="ts">
+<!-- <script lang="ts">
     import { isDark } from '../store.js';
-</script>
+</script> -->
 
 <svelte:head>
     <title>TechFishe.com | About</title>
 </svelte:head>
 
-<div class:dark="{$isDark === true}" class="dark flex w-screen h-screen">
-    <main class="bg-gray-50 dark:bg-gray-800 flex w-screen place-content-center">
-        <span class="self-center text-gray-800 dark:text-gray-50">This is the about page</span>
-    </main>
-</div>
+<main class="bg-gray-50 text-gray-800 dark:bg-gray-800 dark:text-gray-50 flex w-screen place-content-center">
+    <h1 class="absolute top-16 text-3xl font-bold tracking-wide">About!</h1>
+</main>
