@@ -1,15 +1,18 @@
-<script lang="ts">
+<!-- <script lang="ts">
     import { isOpen } from './store.js';
 
     //let count: number = 0;
-</script>
+</script> -->
 
 <svelte:head>
     <title>TechFishe.com | Home</title>
 </svelte:head>
 
 <main class="bg-gray-50 text-gray-800 dark:bg-gray-800 dark:text-gray-50 flex w-screen place-content-center">
-    <h1 class="absolute top-16 text-3xl font-bold tracking-wide">Welcome to hell!</h1>
+    <div class="absolute top-16">
+        <h1 class="text-center text-3xl font-bold tracking-wide">Welcome!</h1>
+        <p class="p-1">Welcome to my portfolio website! Made with love and care in SvelteKit using TailWindCSS</p>
+    </div>
     <!-- <div class="self-center grid grid-cols-1 gap-1">
         <button class="text-gray-50 flex space-x-1 justify-center bg-fuchsia-500 rounded-md p-2 text-lg shadow-md shadow-fuchsia-500/50 hover:shadow-lg hover:bg-fuchsia-600 hover:shadow-fuchsia-600/50 hover:scale-105 transition ease-in-out" on:click={() => count++}>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
