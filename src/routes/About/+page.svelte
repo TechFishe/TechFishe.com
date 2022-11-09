@@ -1,6 +1,7 @@
-<!-- <script lang="ts">
-    import { isDark } from '../store.js';
-</script> -->
+<script>
+    import { page } from '../store.js';
+    page.set("About")
+</script>
 
 <svelte:head>
     <title>TechFishe.com | About</title>

@@ -1,8 +1,9 @@
-<!-- <script lang="ts">
-    import { isOpen } from './store.js';
+<script>
+    import { page } from './store.js';
+    page.set("Home")
 
     //let count: number = 0;
-</script> -->
+</script>
 
 <svelte:head>
     <title>TechFishe.com | Home</title>
