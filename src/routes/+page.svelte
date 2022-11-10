@@ -9,7 +9,7 @@
     <title>TechFishe.com | Home</title>
 </svelte:head>
 
-<main class="bg-gray-50 text-gray-800 dark:bg-gray-800 dark:text-gray-50 flex w-screen place-content-center">
+<main class="flex w-screen place-content-center">
     <div class="absolute top-16">
         <h1 class="text-center text-3xl font-bold tracking-wide">Welcome!</h1>
         <p class="p-1">Welcome to my portfolio website! Made with love and care in SvelteKit using TailWindCSS</p>
