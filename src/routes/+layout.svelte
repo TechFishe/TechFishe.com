@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
     import "../app.css";
     import { isDark, isOpen, page } from './store.js'
     import SideButton from "./lib/sideButton.svelte";
