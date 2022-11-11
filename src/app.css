@@ -5,3 +5,9 @@
 body{
     @apply bg-gray-800 text-gray-50 dark:bg-gray-50 dark:text-gray-800;
 }
+
+@layer components{
+    .debug-border{
+        @apply border border-sky-500;
+    }
+}
