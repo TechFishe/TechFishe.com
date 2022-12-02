@@ -48,18 +48,18 @@
             <SideButton useSVG="false" URL="/Online-Help/Python/Functions" MSG="Functions"/>
         </SideMenu>
         <SideMenu zindex="z-20" val={isOnHelp} title="Online Help" on:click={() => isOnHelp = !isOnHelp}>
-            <h3 class="font-semibold text-xl  text-center justify-center p-1 border-b-2 border-gray-50 dark:border-gray-800">Code</h3>
+            <h3 class="sideHeader sideH3">Code</h3>
             <SideButton useSVG="false" type="menu" MSG="Python" on:click={() => isPyOpen = !isPyOpen} />
             <SideButton useSVG="false" type="menu" MSG="Sveltekit" SVG="" />
         </SideMenu>
         <div class="w-60 absolute top-16 grid grid-cols-1 justify-center">
-            <h2 class="text-center p-1 font-bold text-2xl border-b-2 border-gray-50 dark:border-gray-800">Main Menu</h2>
+            <h2 class="sideHeader sideH2">Main Menu</h2>
             <SideButton URL="/" MSG="Home Page" val="Home" SVG="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/>
             <SideButton URL="/About" MSG="About Page" val="About" SVG="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
             <SideButton MSG="Online Help" type="menu" SVG="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" on:click={()=> isOnHelp = !isOnHelp}/>
         </div>
         <div class="w-60 z-50 absolute grid grid-cols-1 justify-center self-end pb-4">
-            <h2 class="text-center p-1 font-bold text-2xl border-b-2 border-gray-50 dark:border-gray-800">Links</h2>
+            <h2 class="sideHeader sideH2">Links</h2>
             <SideButton URL="https://github.com/TechFishe/TechFishe.com-2.0" isSelf="false" MSG="Source Code" SVG="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/>
         </div>
         <button class:left-64="{isMainOpen === true}" class:left-[17rem]="{isMainOpen === false}" class="rotate-90 left-64 absolute animate-bounce-side top-2/4 flex p-2 rounded-full hover:text-fuchsia-500 hover:bg-gray-700/50 dark:hover:bg-gray-300/50 hover:shadow-md transition ease-in-out" on:click={() => isMainOpen = !isMainOpen}>
