@@ -12,6 +12,6 @@
                 </svg> 
             </button>
         </h2>
-        <slot></slot>
+        <slot />
     </div>
 </div>

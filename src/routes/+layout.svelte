@@ -48,6 +48,7 @@
             <SideButton useSVG="false" URL="/Online-Help/Python/Functions" MSG="Functions"/>
         </SideMenu>
         <SideMenu zindex="z-20" val={isOnHelp} title="Online Help" on:click={() => isOnHelp = !isOnHelp}>
+            <h3 class="font-semibold text-xl  text-center justify-center p-1 border-b-2 border-gray-50 dark:border-gray-800">Code</h3>
             <SideButton useSVG="false" type="menu" MSG="Python" on:click={() => isPyOpen = !isPyOpen} />
             <SideButton useSVG="false" type="menu" MSG="Sveltekit" SVG="" />
         </SideMenu>
