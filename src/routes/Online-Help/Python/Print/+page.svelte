@@ -8,7 +8,7 @@
     <title>Python Print</title>
 </svelte:head>
 
-<main class="flex w-screen place-content-center max-w-[104rem] min-w-[92rem] absolute right-0 snap-y snap-mandatory">
+<main class="flex w-screen place-content-center min-w-[36.25rem] 2xl:max-w-[104rem] xl:max-w-[76.25rem] lg:max-w-[60.25rem] md:max-w-[44.25] absolute right-0 snap-y snap-mandatory">
     <div class="absolute top-16">
         <h1 class="text-center text-3xl font-bold tracking-wide">Python: Print</h1>
         <p class="p-1">After reading this page you will become a pro at using the print function in Python</p>
