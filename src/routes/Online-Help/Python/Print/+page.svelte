@@ -143,7 +143,7 @@
         </p>
     </BaseSection>
 
-    <BaseSection title="F-strings" yPos="2xl:top-[67rem] md:top-[73rem]">
+    <BaseSection title="F-strings" yPos="2xl:top-[67rem] md:top-[72.5rem]">
         <p class="p-1">Forget all your troubles by using Python F-strings if you plan on using variables. Python F-strings allow you to imbed your variables right into the string without using a million + symbols. Let me show you!</p>
         <div class="flex space-x-4 pt-2">
             <div class="bg-gray-900 pb-1 max-w-max pl-3 pr-6 rounded-md flex-col shadow-sm tracking-wider">
@@ -188,7 +188,7 @@
         </p>
     </BaseSection>
 
-    <BaseSection title="The Final 2 Arguments" yPos="2xl:top-[78.5rem] md:top-[84.5rem]">
+    <BaseSection title="The Final 2 Arguments" yPos="2xl:top-[78.5rem] md:top-[82.5rem]">
         <p class="p-1">The final 2 argument that we care about today are the sep and end arguments. These argument are added after all your text with a comma and then the sep and/or end keyword followed by an =''. Like this:</p>
         <div class="codeBox">
             <p class="italic text-sky-400">print</p>
@@ -209,7 +209,7 @@
         </p>
     </BaseSection>
 
-    <BaseSection title="Special Characters" yPos="2xl:top-[87.5rem] md:top-[93.5rem]">
+    <BaseSection title="Special Characters" yPos="2xl:top-[87.5rem] md:top-[96rem]">
         <p class="p-1">Special characters are characters that let you do fun things like new lines and add tabs right in the print function without having a million spaces or print functions. Here they are:</p>
         <div class="grid grid-cols-3 grid-rows-5 rounded-md px-1 shadow-sm bg-gray-700 snap-center snap-normal">
             <span class="leftItem topItem">Special character:</span>
@@ -264,7 +264,7 @@
         </div>
     </BaseSection>
 
-    <BaseSection title="Closing Words" yPos="2xl:top-[108.75rem] md:top-[114.75rem]">
+    <BaseSection title="Closing Words" yPos="2xl:top-[108.75rem] md:top-[117rem]">
         <p class="multiLineText">Now you should be a pro at using the Python print function and should be able to help your fellow python devs on their journey to becoming better programmers.
             <br>I hope this article helped you out a little bit, if it did please share it with other people. If you have problems with it please share your thoughts with me, I'd love to make this better for you guys.
         </p>
