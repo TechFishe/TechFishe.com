@@ -4,28 +4,6 @@
     import SideButton from "./lib/btns/sideBtn.svelte";
     import SideMenu from "./lib/containers/sideMenu.svelte";
 
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "firebase/app";
-    import { getAnalytics } from "firebase/analytics";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-    
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    const firebaseConfig = {
-      apiKey: "AIzaSyCDCr1_zdG9z-W0D7FbYITZ_ia58Ih-nvc",
-      authDomain: "techfishe-web.firebaseapp.com",
-      projectId: "techfishe-web",
-      storageBucket: "techfishe-web.appspot.com",
-      messagingSenderId: "79386887133",
-      appId: "1:79386887133:web:03d0fc124ab2d609aa2c34",
-      measurementId: "G-R6NFHGXC2M"
-    };
-
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-
     let isDark:boolean = false, isMainOpen:boolean = true, isOnHelp:boolean = false, isPyOpen:boolean = false;
     if (browser){
         if(localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)){
