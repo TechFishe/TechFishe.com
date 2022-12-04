@@ -4,6 +4,10 @@
     page.set("OnHelp")
 </script>
 
+<svelte:head>
+    <title>Python Print</title>
+</svelte:head>
+
 <main class="flex w-screen place-content-center max-w-[104rem] min-w-[92rem] absolute right-0 snap-y snap-mandatory">
     <div class="absolute top-16">
         <h1 class="text-center text-3xl font-bold tracking-wide">Python: Print</h1>
