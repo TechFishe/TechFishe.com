@@ -25,7 +25,7 @@
     export const prerender = true;
 </script>
 
-<div class="flex w-screen h-screen">
+<div class="grid w-screen h-screen">
     <nav class:shadow-lg="{isMainOpen === true}" class:shadow-md="{isMainOpen === false}" class="fixed backdrop-blur-[2px] z-50 w-screen h-13 -top-1 p-2 items-center justify-between flex rounded bg-gray-600/75 dark:bg-gray-100/75 transition-shadow ease-in-out">
         <span class="flex text-3xl font-bold tracking-wide">TechFishe.com</span>
         <button class="flex p-2 rounded-full mr-4 hover:scale-110 hover:text-fuchsia-500 hover:bg-gray-800 dark:hover:bg-gray-300 hover:shadow-md transition ease-in-out" on:click={changeTheme}>
@@ -40,7 +40,7 @@
             {/if}
         </button>
     </nav>
-    <div class:-translate-x-64="{isMainOpen === false}" class="fixed z-10 flex place-content-center w-60 h-screen bg-gray-700 dark:bg-gray-200 rounded transition-transform duration-500 ease-in-out">
+    <div class:-translate-x-64="{isMainOpen === false}" class="fixed z-10 flex place-content-center w-60 h-screen bg-gray-700/[0.85] backdrop-blur-[2px] dark:bg-gray-200/[0.85] rounded transition-transform duration-500 ease-in-out">
         <SideMenu zindex="z-30" val={isPyOpen} title="Python" on:click={() => isPyOpen = !isPyOpen}>
             <SideButton useSVG="false" URL="/Online-Help/Python/Print" MSG="Print"/>
             <SideButton useSVG="false" URL="/Online-Help/Python/Vars" MSG="Vars"/>
