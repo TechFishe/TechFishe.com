@@ -8,14 +8,14 @@
     <title>Python Print</title>
 </svelte:head>
 
-<main class="flex w-screen place-content-center 2xl:max-w-[88.5rem] xl:max-w-[72.5rem] lg:max-w-[56.5rem] md:max-w-[40.5rem] sm:max-w-[32.5rem] px-4 justify-self-center snap-y snap-mandatory">
+<main class="flex w-screen place-content-center 2xl:max-w-[88.5rem] xl:max-w-[72.5rem] lg:max-w-[56.5rem] md:max-w-[40.5rem] sm:max-w-[32.5rem] mx-4 justify-self-center snap-y snap-mandatory">
     <div class="absolute top-16">
         <h1 class="text-center text-3xl font-bold tracking-wide">Python: Print</h1>
-        <p class="p-1">After reading this page you will become a pro at using the print function in Python</p>
+        <p>After reading this page you will become a pro at using the print function in Python</p>
     </div>
     
     <BaseSection title="Intro" yPos="top-32">
-        <p class="multiLineText">The built-in Python print function is a function who's sole purpose is to write a new line to the terminal every time it's called. How it works is a lot less important, rather this page will teach you how to use it like a pro.
+        <p class="pDefault">The built-in Python print function is a function who's sole purpose is to write a new line to the terminal every time it's called. How it works is a lot less important, rather this page will teach you how to use it like a pro.
             <br>The print function can take a max of 5 arguments when called, however only the first is required.
         </p>
         <div class="grid grid-cols-5 grid-rows-6 rounded-md px-1 shadow-sm bg-gray-700 snap-center snap-normal">
@@ -65,7 +65,7 @@
     </BaseSection>
 
     <BaseSection title="Typecasting" yPos="2xl:top-[37rem] md:top-[38rem]">
-        <p class="multiLineText">Ok we need to talk about type casting in Python really quick because it sucks. So in Python when you print something you need to be using objects of the same type (strings, numbers, booleans, etc).
+        <p class="pDefault">Ok we need to talk about type casting in Python really quick because it sucks. So in Python when you print something you need to be using objects of the same type (strings, numbers, booleans, etc).
             <br>So when you use the print function one thing you can do to print a string and a number together is to typecast the number into a string like this:
         </p>
         <div class="codeBox">
@@ -112,7 +112,7 @@
                 <p class="text-pink-500">)</p>
             </div>
         </div>
-        <p class="multiLineText">Both of these will equal 12, even though in the second one is adding a float with an integer. This is because when you typecast to an integer Python will remove all decimal points so it is just a whole number.
+        <p class="pDefault">Both of these will equal 12, even though in the second one is adding a float with an integer. This is because when you typecast to an integer Python will remove all decimal points so it is just a whole number.
             <br>If you need to add decimals, typecast to a float instead like this:
         </p>
         <div class="flex space-x-4 pt-2">
@@ -138,13 +138,13 @@
                 <p class="text-pink-500">)</p>
             </div>
         </div>
-        <p class="multiLineText">Now the second one will be 12.8, however the first one will be 12.0 even though it doesn't have any decimal values that we would ever care about.
+        <p class="pDefault">Now the second one will be 12.8, however the first one will be 12.0 even though it doesn't have any decimal values that we would ever care about.
             <br>You could just use these methods of use the print command and get along just fine, but when you start using a lot more variables you'll wish you had a better way to add them without adding another + sign.
         </p>
     </BaseSection>
 
     <BaseSection title="F-strings" yPos="2xl:top-[67rem] md:top-[72.5rem]">
-        <p class="p-1">Forget all your troubles by using Python F-strings if you plan on using variables. Python F-strings allow you to imbed your variables right into the string without using a million + symbols. Let me show you!</p>
+        <p class="pDefault">Forget all your troubles by using Python F-strings if you plan on using variables. Python F-strings allow you to imbed your variables right into the string without using a million + symbols. Let me show you!</p>
         <div class="flex space-x-4 pt-2">
             <div class="bg-gray-900 pb-1 max-w-max pl-3 pr-6 rounded-md flex-col shadow-sm tracking-wider">
                 <div class="flex">
@@ -183,13 +183,13 @@
                 </div>
             </div>
         </div>
-        <p class="multiLineText">Both of these will produce the same thing at the end of the day, but when you're using many, many variables in something like a terminal game you will want to use the f-string.
+        <p class="pDefault">Both of these will produce the same thing at the end of the day, but when you're using many, many variables in something like a terminal game you will want to use the f-string.
             <br>Ok, now we gotta talk about the next two arguments you can use and then we can be pretty much done. I'm not going to talk about the last two arguments because I never use them and I don't think you'll ever have to.
         </p>
     </BaseSection>
 
-    <BaseSection title="The Final 2 Arguments" yPos="2xl:top-[78.5rem] md:top-[82.5rem]">
-        <p class="p-1">The final 2 argument that we care about today are the sep and end arguments. These argument are added after all your text with a comma and then the sep and/or end keyword followed by an =''. Like this:</p>
+    <BaseSection title="The Final 2 Arguments" yPos="2xl:top-[78.5rem] md:top-[84.5rem]">
+        <p class="pDefault">The final 2 argument that we care about today are the sep and end arguments. These argument are added after all your text with a comma and then the sep and/or end keyword followed by an =''. Like this:</p>
         <div class="codeBox">
             <p class="italic text-sky-400">print</p>
             <p class="text-pink-500">(</p>
@@ -204,13 +204,13 @@
             <p class="text-emerald-400">"!"</p>
             <p class="text-pink-500">)</p>
         </div>
-        <p class="multiLineText">What this code will do is replace every space between words with a comma and end the line with an "!". The way these can be optional is because they have default values built in to the function.
+        <p class="pDefault">What this code will do is replace every space between words with a comma and end the line with an "!". The way these can be optional is because they have default values built in to the function.
             <br>The default value for the sep keyword is " " or a space. The default for the end keyword is a "\n". What's that you ask?
         </p>
     </BaseSection>
 
-    <BaseSection title="Special Characters" yPos="2xl:top-[87.5rem] md:top-[96rem]">
-        <p class="p-1">Special characters are characters that let you do fun things like new lines and add tabs right in the print function without having a million spaces or print functions. Here they are:</p>
+    <BaseSection title="Special Characters" yPos="2xl:top-[87.5rem] md:top-[97.5rem]">
+        <p>Special characters are characters that let you do fun things like new lines and add tabs right in the print function without having a million spaces or print functions. Here they are:</p>
         <div class="grid grid-cols-3 grid-rows-5 rounded-md px-1 shadow-sm bg-gray-700 snap-center snap-normal">
             <span class="leftItem topItem">Special character:</span>
             <span class="rightItem3 topItem">What they do:</span>
@@ -223,7 +223,7 @@
             <span class="leftItem">\"</span>
             <span class="rightItem3">Adds a qoute or double qoutes into your outputs</span>
         </div>
-        <p class="multiLineText">As I'm sure you've noticed, all of these special characters begin with a backslash "\" which is why we need a special character for that so Python doesn't get confused.
+        <p class="pDefault">As I'm sure you've noticed, all of these special characters begin with a backslash "\" which is why we need a special character for that so Python doesn't get confused.
             <br>This is also why we need a special character for a qoute or double qoute, so we don't confuse Python into thinking we have nothing else to output. Here's some examples to look at:
         </p>
         <div class="flex space-x-4 pt-1">
@@ -264,8 +264,8 @@
         </div>
     </BaseSection>
 
-    <BaseSection title="Closing Words" yPos="2xl:top-[108.75rem] md:top-[117rem]">
-        <p class="multiLineText">Now you should be a pro at using the Python print function and should be able to help your fellow python devs on their journey to becoming better programmers.
+    <BaseSection title="Closing Words" yPos="2xl:top-[108.75rem] md:top-[112rem]">
+        <p class="pDefault">Now you should be a pro at using the Python print function and should be able to help your fellow python devs on their journey to becoming better programmers.
             <br>I hope this article helped you out a little bit, if it did please share it with other people. If you have problems with it please share your thoughts with me, I'd love to make this better for you guys.
         </p>
     </BaseSection>
@@ -278,5 +278,5 @@
     .rightItem2{ @apply col-span-6 border-l p-1 }
     .rightItem3{ @apply col-span-2 border-l p-1}
 
-    .multiLineText{ @apply p-1 text-center }
+    .pDefault{ @apply p-1 text-center }
 </style>
