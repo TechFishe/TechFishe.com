@@ -264,7 +264,7 @@
         </div>
     </BaseSection>
 
-    <BaseSection title="Closing Words" yPos="2xl:top-[108.75rem] md:top-[120rem]">
+    <BaseSection title="Closing Words" yPos="2xl:top-[108.75rem] md:top-[118rem]">
         <p class="pDefault">Now you should be a pro at using the Python print function and should be able to help your fellow python devs on their journey to becoming better programmers.
             <br>I hope this article helped you out a little bit, if it did please share it with other people. If you have problems with it please share your thoughts with me, I'd love to make this better for you guys.
         </p>
