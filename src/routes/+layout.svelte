@@ -21,8 +21,6 @@
 
         isDark ? document.documentElement.classList.add("dark") : document.documentElement.classList.remove("dark");
     }
-
-    export const prerender = true;
 </script>
 
 <div class="grid w-screen h-screen">
@@ -46,6 +44,7 @@
             <SideButton useSVG="false" URL="/Online-Help/Python/Vars" MSG="Vars"/>
             <SideButton useSVG="false" URL="/Online-Help/Python/Loops" MSG="Loops"/>
             <SideButton useSVG="false" URL="/Online-Help/Python/Functions" MSG="Functions"/>
+            <SideButton useSVG="false" URL="/Online-Help/Python/Lists" MSG="Arrays/Lists"/>
         </SideMenu>
         <SideMenu zindex="z-20" val={isOnHelp} title="Online Help" on:click={() => isOnHelp = !isOnHelp}>
             <h3 class="sideHeader sideH3">Code</h3>
@@ -61,6 +60,7 @@
         <div class="w-60 z-50 absolute grid grid-cols-1 justify-center self-end pb-4">
             <h2 class="sideHeader sideH2">Links</h2>
             <SideButton URL="https://github.com/TechFishe/TechFishe.com-2.0" isSelf="false" MSG="Source Code" SVG="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/>
+            <SideButton URL="https://www.w3schools.com/" useSVG="false" isSelf="false" MSG="w3 Schools"/>
         </div>
         <button class:left-64="{isMainOpen === true}" class:left-[17rem]="{isMainOpen === false}" class="rotate-90 left-64 absolute animate-bounce-side top-2/4 flex p-2 rounded-full text-gray-50/90 dark:text-gray-800/90 hover:text-fuchsia-500/95 hover:bg-gray-700/50 dark:hover:bg-gray-300/50 hover:shadow-md transition ease-in-out" on:click={() => isMainOpen = !isMainOpen}>
             {#if isMainOpen === true}

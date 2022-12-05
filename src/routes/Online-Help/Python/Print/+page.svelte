@@ -2,13 +2,15 @@
     import BaseSection from '../../../lib/text/baseSection.svelte';
     import { page } from '../../../store.js';
     page.set("OnHelp")
+
+    export const prerender = true;
 </script>
 
 <svelte:head>
     <title>Python Print</title>
 </svelte:head>
 
-<main class="flex w-screen place-content-center 2xl:max-w-[88.5rem] xl:max-w-[72.5rem] lg:max-w-[56.5rem] md:max-w-[40.5rem] sm:max-w-[32.5rem] mx-4 justify-self-center snap-y snap-mandatory">
+<main class="defaultBox mx-4 snap-y snap-mandatory">
     <div class="absolute top-16">
         <h1 class="text-center text-3xl font-bold tracking-wide">Python: Print</h1>
         <p>After reading this page you will become a pro at using the print function in Python</p>
@@ -18,7 +20,7 @@
         <p class="pDefault">The built-in Python print function is a function who's sole purpose is to write a new line to the terminal every time it's called. How it works is a lot less important, rather this page will teach you how to use it like a pro.
             <br>The print function can take a max of 5 arguments when called, however only the first is required.
         </p>
-        <div class="grid grid-cols-5 grid-rows-6 rounded-md px-1 shadow-sm bg-gray-700 snap-center snap-normal">
+        <div class="grid grid-cols-5 grid-rows-6 rounded-md px-1 shadow-sm bg-gray-700 dark:bg-gray-200 snap-center snap-normal">
             <span class="leftItem topItem">Arguments:</span>
             <span class="rightItem1 topItem">What they do:</span>
             <span class="leftItem border-t">object(s)</span>
@@ -272,11 +274,7 @@
 </main>
 
 <style>
-    .topItem{ @apply text-xl font-semibold border-b }
-    .leftItem{ @apply col-span-1 border-r p-1 }
     .rightItem1{ @apply col-span-4 border-l p-1 }
     .rightItem2{ @apply col-span-6 border-l p-1 }
     .rightItem3{ @apply col-span-2 border-l p-1}
-
-    .pDefault{ @apply p-1 text-center }
 </style>

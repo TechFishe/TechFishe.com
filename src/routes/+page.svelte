@@ -9,7 +9,7 @@
     <title>TechFishe.com | Home</title>
 </svelte:head>
 
-<main class="flex w-screen place-content-center 2xl:max-w-[88.5rem] xl:max-w-[72.5rem] lg:max-w-[56.5rem] md:max-w-[40.5rem] sm:max-w-[32.5rem] justify-self-center">
+<main class="defaultBox">
     <div class="absolute top-16">
         <h1 class="text-center text-3xl font-bold tracking-wide">Welcome!</h1>
         <p class="p-1">Welcome to my portfolio website! Made with love and care in SvelteKit using TailWindCSS</p>
