@@ -20,19 +20,19 @@
         <p class="pDefault">The built-in Python print function is a function who's sole purpose is to write a new line to the terminal every time it's called. How it works is a lot less important, rather this page will teach you how to use it like a pro.
             <br>The print function can take a max of 5 arguments when called, however only the first is required.
         </p>
-        <div class="grid grid-cols-5 grid-rows-6 rounded-md px-1 shadow-sm bg-gray-700 dark:bg-gray-200 snap-center snap-normal">
+        <div class="grid-cols-5 grid-rows-6 defaultGrid">
             <span class="leftItem topItem">Arguments:</span>
             <span class="rightItem1 topItem">What they do:</span>
             <span class="leftItem border-t">object(s)</span>
-            <span class="rightItem1 border-t">Any object, and as many as you like. Will be converted to string before printed</span>
+            <span class="rightItem1 border-t gridBorder">Any object, and as many as you like. Will be converted to string before printed</span>
             <span class="leftItem">sep='separator'</span>
-            <span class="rightItem1">Optional. Specify how to separate the objects, if there is more than one. Default is ' '</span>
+            <span class="rightItem1 gridBorder">Optional. Specify how to separate the objects, if there is more than one. Default is ' '</span>
             <span class="leftItem">end='end'</span>
-            <span class="rightItem1">Optional. Specify what to print at the end. Default is '\n' (line feed)</span>
+            <span class="rightItem1 gridBorder">Optional. Specify what to print at the end. Default is '\n' (line feed)</span>
             <span class="leftItem">file</span>
-            <span class="rightItem1">Optional. An object with a write method. Default is sys.stdout</span>
+            <span class="rightItem1 gridBorder">Optional. An object with a write method. Default is sys.stdout</span>
             <span class="leftItem">flush</span>
-            <span class="rightItem1">Optional. A Boolean, specifying if the output is flushed (True) or buffered (False). Default is False</span>
+            <span class="rightItem1 gridBorder">Optional. A Boolean, specifying if the output is flushed (True) or buffered (False). Default is False</span>
         </div>
         <div class="grid justify-items-center w-[75rem]">
             <p class="py-1">Let me explain these further. As you can see, the only required argument is the object(s) argument. This will be where your strings or numbers go like this:</p>
@@ -81,15 +81,15 @@
             <p class="text-pink-500">)</p>
         </div>
         <p class="p-1">This also works with variables and converting them to strings. Here's the three different type cast commands:</p>
-        <div class="grid grid-cols-7 grid-rows-4 rounded-md px-1 shadow-sm bg-gray-700 snap-center snap-normal">
+        <div class="grid-cols-7 defaultGrid">
             <span class="leftItem topItem">Typecasting:</span>
-            <span class="rightItem2 topItem">What they do:</span>
+            <span class="rightItem2 topItem gridBorder">What they do:</span>
             <span class="leftItem border-t">str()</span>
-            <span class="rightItem2 border-t">Constructs a string from a wide variety of data types, including strings, integer literals and float literals</span>
+            <span class="rightItem2 border-t gridBorder">Constructs a string from a wide variety of data types, including strings, integer literals and float literals</span>
             <span class="leftItem">int()</span>
-            <span class="rightItem2">Constructs an integer number from an integer literal, a float literal (by removing all decimals), or a string literal (providing the string represents a whole number)</span>
+            <span class="rightItem2 gridBorder">Constructs an integer number from an integer literal, a float literal (by removing all decimals), or a string literal (providing the string represents a whole number)</span>
             <span class="leftItem">float()</span>
-            <span class="rightItem2">Constructs a float number from an integer literal, a float literal or a string literal (providing the string represents a float or an integer)</span>
+            <span class="rightItem2 gridBorder">Constructs a float number from an integer literal, a float literal or a string literal (providing the string represents a float or an integer)</span>
         </div>
         <div class="flex space-x-4 pt-2">
             <div class="codeBox">
@@ -148,9 +148,9 @@
     <BaseSection title="F-strings" yPos="2xl:top-[67rem] md:top-[72.25rem]">
         <p class="pDefault">Forget all your troubles by using Python F-strings if you plan on using variables. Python F-strings allow you to imbed your variables right into the string without using a million + symbols. Let me show you!</p>
         <div class="flex space-x-4 pt-2">
-            <div class="bg-gray-900 pb-1 max-w-max pl-3 pr-6 rounded-md flex-col shadow-sm tracking-wider">
+            <div class="bg-gray-900 dark:bg-gray-300 pb-1 max-w-max pl-3 pr-6 rounded-md flex-col shadow-sm tracking-wider">
                 <div class="flex">
-                    <p class="text-gray-300">text</p>
+                    <p class="text-gray-300 dark:text-gray-600">text</p>
                     <p class="text-sky-400">&nbsp;=&nbsp;</p>
                     <p class="text-emerald-400">"World!"</p>
                 </div>
@@ -160,16 +160,16 @@
                     <p class="italic text-amber-500">f</p>
                     <p class="text-emerald-400">"Hello&nbsp;</p>
                     <p class="text-amber-500">&#10100;</p>
-                    <p class="text-gray-300">text</p>
+                    <p class="text-gray-300 dark:text-gray-600">text</p>
                     <p class="text-amber-500">&#10101;</p>
                     <p class="text-emerald-400">"</p>
                     <p class="text-pink-500">)</p>
                 </div>
             </div>
             <p class="self-center">Or</p>
-            <div class="bg-gray-900 pb-1 max-w-max pl-3 pr-6 rounded-md flex-col shadow-sm tracking-wider">
+            <div class="bg-gray-900 dark:bg-gray-300 pb-1 max-w-max pl-3 pr-6 rounded-md flex-col shadow-sm tracking-wider">
                 <div class="flex">
-                    <p class="text-gray-300">text</p>
+                    <p class="text-gray-300 dark:text-gray-600">text</p>
                     <p class="text-sky-400">&nbsp;=&nbsp;</p>
                     <p class="text-emerald-400">"World!"</p>
                 </div>
@@ -179,7 +179,7 @@
                     <p class="text-emerald-400">"Hello&nbsp;"</p>
                     <p class="italic text-sky-400">&nbsp;+&nbsp;str</p>
                     <p class="text-pink-500">(</p>
-                    <p class="text-gray-300">text</p>
+                    <p class="text-gray-300 dark:text-gray-600">text</p>
                     <p class="text-pink-500">)</p>
                     <p class="text-pink-500">)</p>
                 </div>
@@ -213,17 +213,17 @@
 
     <BaseSection title="Special Characters" yPos="2xl:top-[87.5rem] md:top-[98rem]">
         <p>Special characters are characters that let you do fun things like new lines and add tabs right in the print function without having a million spaces or print functions. Here they are:</p>
-        <div class="grid grid-cols-3 grid-rows-5 rounded-md px-1 shadow-sm bg-gray-700 snap-center snap-normal">
+        <div class="grid-cols-3 grid-rows-5 defaultGrid">
             <span class="leftItem topItem">Special character:</span>
-            <span class="rightItem3 topItem">What they do:</span>
+            <span class="rightItem3 topItem gridBorder">What they do:</span>
             <span class="leftItem border-t">\n</span>
-            <span class="rightItem3 border-t">Will tell the terminal to start a new line</span>
+            <span class="rightItem3 border-t gridBorder">Will tell the terminal to start a new line</span>
             <span class="leftItem">\t</span>
-            <span class="rightItem3">Adds 5 spaces into your output</span>
+            <span class="rightItem3 gridBorder">Adds 5 spaces into your output</span>
             <span class="leftItem">\\</span>
-            <span class="rightItem3">Adds a backslash into your output</span>
+            <span class="rightItem3 gridBorder">Adds a backslash into your output</span>
             <span class="leftItem">\"</span>
-            <span class="rightItem3">Adds a qoute or double qoutes into your outputs</span>
+            <span class="rightItem3 gridBorder">Adds a qoute or double qoutes into your outputs</span>
         </div>
         <p class="pDefault">As I'm sure you've noticed, all of these special characters begin with a backslash "\" which is why we need a special character for that so Python doesn't get confused.
             <br>This is also why we need a special character for a qoute or double qoute, so we don't confuse Python into thinking we have nothing else to output. Here's some examples to look at:
@@ -276,5 +276,5 @@
 <style>
     .rightItem1{ @apply col-span-4 border-l p-1 }
     .rightItem2{ @apply col-span-6 border-l p-1 }
-    .rightItem3{ @apply col-span-2 border-l p-1}
+    .rightItem3{ @apply col-span-2 border-l p-1 }
 </style>
