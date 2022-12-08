@@ -59,8 +59,8 @@
         </div>
         <div class="w-60 z-50 absolute grid grid-cols-1 justify-center self-end pb-4">
             <h2 class="sideHeader sideH2">Links</h2>
-            <SideButton URL="https://github.com/TechFishe/TechFishe.com-2.0" isSelf="false" MSG="Source Code" SVG="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/>
-            <SideButton URL="https://www.w3schools.com/" useSVG="false" isSelf="false" MSG="w3 Schools"/>
+            <SideButton URL="https://github.com/TechFishe/TechFishe.com-2.0" extra="hover:text-orange-600 transition-colors duration-150 ease-in" isSelf="false" MSG="Source Code" SVG="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/>
+            <SideButton URL="https://www.w3schools.com/" extra="hover:text-green-600 transition-colors duration-150 ease-in" isSelf="false" MSG="w3 Schools" SVG="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/>
         </div>
         <button class:left-64="{isMainOpen === true}" class:left-[17rem]="{isMainOpen === false}" class="rotate-90 left-64 absolute animate-bounce-side top-2/4 flex p-2 rounded-full text-gray-50/90 dark:text-gray-800/90 hover:text-fuchsia-500/95 dark:hover:text-fuchsia-500/95 hover:bg-gray-700/50 dark:hover:bg-gray-300/50 hover:shadow-md dark:shadow-gray-600/50 transition ease-in-out" on:click={() => isMainOpen = !isMainOpen}>
             {#if isMainOpen === true}
