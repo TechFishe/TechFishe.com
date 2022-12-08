@@ -1,10 +1,7 @@
 <script lang="ts">
     import BaseSection from '../../../lib/text/baseSection.svelte';
-
-    function copy(text:string){
-        navigator.clipboard.writeText(text);
-        alert("Copied text: " + text);
-    }
+    import CodeBox from '../../../lib/containers/codeBox.svelte';
+    import MultiCodeBox from '../../../lib/containers/multiCodeBox.svelte';
 
     export const prerender = true;
 </script>
@@ -39,48 +36,41 @@
         </div>
         <div class="grid justify-items-center w-[75rem]">
             <p class="py-1">Let me explain these further. As you can see, the only required argument is the object(s) argument. This will be where your strings or numbers go like this:</p>
-            <div class="flex space-x-2 items-center">
-                <div class="codeBox">
-                    <p class="italic text-sky-400">print</p>
-                    <p class="italic text-pink-500">(</p>
-                    <p class="text-emerald-400">"Hello world!"</p>
-                    <p class="italic text-pink-500">)</p>
-                </div>
-                <button class="flex p-1.5 rounded-full mr-4 hover:scale-110 hover:text-fuchsia-500 hover:bg-gray-700 dark:hover:bg-gray-300 shadow-sm hover:shadow-md dark:shadow-gray-600 transition ease-in-out" on:click={() => copy(`print("Hello world!");`)}>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 7.5V6.108c0-1.135.845-2.098 1.976-2.192.373-.03.748-.057 1.123-.08M15.75 18H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08M15.75 18.75v-1.875a3.375 3.375 0 00-3.375-3.375h-1.5a1.125 1.125 0 01-1.125-1.125v-1.5A3.375 3.375 0 006.375 7.5H5.25m11.9-3.664A2.251 2.251 0 0015 2.25h-1.5a2.251 2.251 0 00-2.15 1.586m5.8 0c.065.21.1.433.1.664v.75h-6V4.5c0-.231.035-.454.1-.664M6.75 7.5H4.875c-.621 0-1.125.504-1.125 1.125v12c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V16.5a9 9 0 00-9-9z" />
-                      </svg>
-                </button>
-            </div>
+            <CodeBox text='print("Hello world!");'>
+                <p class="italic text-sky-400">print</p>
+                <p class="italic text-pink-500">(</p>
+                <p class="text-emerald-400">"Hello world!"</p>
+                <p class="italic text-pink-500">)</p>
+            </CodeBox>
             <p class="py-1">And when you chain multiple objects together in one print statement you use the "+" or "," character like this:</p>
-            <div class="flex space-x-4">
-                <div class="codeBox">
+            <div class="flex space-x-4 items-center">
+                <CodeBox>
                     <p class="italic text-sky-400">print</p>
                     <p class="italic text-pink-500">(</p>
                     <p class="text-emerald-400">"Hello "</p>
                     <p class="italic text-sky-400">&nbsp;+&nbsp;</p>
                     <p class="text-emerald-400">"World"</p>
                     <p class="italic text-pink-500">)</p>
-                </div>
+                </CodeBox>
                 <p>Or</p>
-                <div class="codeBox">
+                <CodeBox>
                     <p class="italic text-sky-400">print</p>
                     <p class="italic text-pink-500">(</p>
                     <p class="text-emerald-400">"Hello "</p>
                     <p class="italic text-sky-400">,&nbsp;</p>
                     <p class="text-emerald-400">"World"</p>
                     <p class="italic text-pink-500">)</p>
-                </div>
+                </CodeBox>
             </div>
             <p class="py-1">Look, that wasn't so bad</p>
         </div>
     </BaseSection>
 
-    <BaseSection title="Typecasting" yPos="2xl:top-[37rem] md:top-[38rem]">
+    <BaseSection title="Typecasting" yPos="2xl:top-[37rem] md:top-[39rem]">
         <p class="pDefault">Ok we need to talk about type casting in Python really quick because it sucks. So in Python when you print something you need to be using objects of the same type (strings, numbers, booleans, etc).
             <br>So when you use the print function one thing you can do to print a string and a number together is to typecast the number into a string like this:
         </p>
-        <div class="codeBox">
+        <CodeBox text='print("I am " + str(12))'>
             <p class="italic text-sky-400">print</p>
             <p class="text-pink-500">(</p>
             <p class="text-emerald-400">"I am "</p>
@@ -89,7 +79,7 @@
             <p class="text-emerald-400">12</p>
             <p class="text-pink-500">)</p>
             <p class="text-pink-500">)</p>
-        </div>
+        </CodeBox>
         <p class="p-1">This also works with variables and converting them to strings. Here's the three different type cast commands:</p>
         <div class="grid-cols-7 defaultGrid">
             <span class="leftItem topItem">Typecasting:</span>
@@ -101,8 +91,8 @@
             <span class="leftItem">float()</span>
             <span class="rightItem2 gridBorder">Constructs a float number from an integer literal, a float literal or a string literal (providing the string represents a float or an integer)</span>
         </div>
-        <div class="flex space-x-4 pt-2">
-            <div class="codeBox">
+        <div class="flex space-x-4 pt-2 items-center">
+            <CodeBox text='print(6 + int("6"))'>
                 <p class="italic text-sky-400">print</p>
                 <p class="text-pink-500">(</p>
                 <p class="text-emerald-400">6</p>
@@ -111,24 +101,24 @@
                 <p class="text-emerald-400">"6"</p>
                 <p class="text-pink-500">)</p>
                 <p class="text-pink-500">)</p>
-            </div>
+            </CodeBox>
             <p>Or</p>
-            <div class="codeBox">
+            <CodeBox text='print(6 + int("6.8"))'>
                 <p class="italic text-sky-400">print</p>
                 <p class="text-pink-500">(</p>
                 <p class="text-emerald-400">6</p>
-                <p class="italic text-sky-400">&nbsp;+&nbsp;float</p>
+                <p class="italic text-sky-400">&nbsp;+&nbsp;int</p>
                 <p class="text-pink-500">(</p>
                 <p class="text-emerald-400">"6.8"</p>
                 <p class="text-pink-500">)</p>
                 <p class="text-pink-500">)</p>
-            </div>
+            </CodeBox>
         </div>
         <p class="pDefault">Both of these will equal 12, even though in the second one is adding a float with an integer. This is because when you typecast to an integer Python will remove all decimal points so it is just a whole number.
             <br>If you need to add decimals, typecast to a float instead like this:
         </p>
-        <div class="flex space-x-4 pt-2">
-            <div class="codeBox">
+        <div class="flex space-x-4 pt-2 items-center">
+            <CodeBox text='print(6 + float("6"))'>
                 <p class="italic text-sky-400">print</p>
                 <p class="text-pink-500">(</p>
                 <p class="text-emerald-400">6</p>
@@ -137,9 +127,9 @@
                 <p class="text-emerald-400">"6"</p>
                 <p class="text-pink-500">)</p>
                 <p class="text-pink-500">)</p>
-            </div>
+            </CodeBox>
             <p>Or</p>
-            <div class="codeBox">
+            <CodeBox text='print(6 + float("6.8"))'>
                 <p class="italic text-sky-400">print</p>
                 <p class="text-pink-500">(</p>
                 <p class="text-emerald-400">6</p>
@@ -148,17 +138,17 @@
                 <p class="text-emerald-400">"6.8"</p>
                 <p class="text-pink-500">)</p>
                 <p class="text-pink-500">)</p>
-            </div>
+            </CodeBox>
         </div>
         <p class="pDefault">Now the second one will be 12.8, however the first one will be 12.0 even though it doesn't have any decimal values that we would ever care about.
             <br>You could just use these methods of use the print command and get along just fine, but when you start using a lot more variables you'll wish you had a better way to add them without adding another + sign.
         </p>
     </BaseSection>
 
-    <BaseSection title="F-strings" yPos="2xl:top-[67rem] md:top-[70.5rem]">
+    <BaseSection title="F-strings" yPos="2xl:top-[67rem] md:top-[73.5rem]">
         <p class="pDefault">Forget all your troubles by using Python F-strings if you plan on using variables. Python F-strings allow you to imbed your variables right into the string without using a million + symbols. Let me show you!</p>
         <div class="flex space-x-4">
-            <div class="bg-gray-900 dark:bg-gray-300 pb-1 max-w-max pl-3 pr-6 rounded-md flex-col shadow-sm tracking-wider">
+            <MultiCodeBox>
                 <div class="flex">
                     <p class="text-gray-300 dark:text-gray-600">text</p>
                     <p class="text-sky-400">&nbsp;=&nbsp;</p>
@@ -175,9 +165,9 @@
                     <p class="text-emerald-400">"</p>
                     <p class="text-pink-500">)</p>
                 </div>
-            </div>
+            </MultiCodeBox>
             <p class="self-center">Or</p>
-            <div class="bg-gray-900 dark:bg-gray-300 pb-1 max-w-max pl-3 pr-6 rounded-md flex-col shadow-sm tracking-wider">
+            <MultiCodeBox>
                 <div class="flex">
                     <p class="text-gray-300 dark:text-gray-600">text</p>
                     <p class="text-sky-400">&nbsp;=&nbsp;</p>
@@ -193,16 +183,16 @@
                     <p class="text-pink-500">)</p>
                     <p class="text-pink-500">)</p>
                 </div>
-            </div>
+            </MultiCodeBox>
         </div>
         <p class="pDefault">Both of these will produce the same thing at the end of the day, but when you're using many, many variables in something like a terminal game you will want to use the f-string.
             <br>Ok, now we gotta talk about the next two arguments you can use and then we can be pretty much done. I'm not going to talk about the last two arguments because I never use them and I don't think you'll ever have to.
         </p>
     </BaseSection>
 
-    <BaseSection title="The Final 2 Arguments" yPos="2xl:top-[78.5rem] md:top-[84.25rem]">
+    <BaseSection title="The Final 2 Arguments" yPos="2xl:top-[78.5rem] md:top-[86.75rem]">
         <p class="pDefault">The final 2 argument that we care about today are the sep and end arguments. These argument are added after all your text with a comma and then the sep and/or end keyword followed by an =''. Like this:</p>
-        <div class="codeBox">
+        <CodeBox text='print("Hello world", sep=",", end="!")'>
             <p class="italic text-sky-400">print</p>
             <p class="text-pink-500">(</p>
             <p class="text-emerald-400">"Hello World"</p>
@@ -215,13 +205,13 @@
             <p class="text-sky-400">=</p>
             <p class="text-emerald-400">"!"</p>
             <p class="text-pink-500">)</p>
-        </div>
+        </CodeBox>
         <p class="pDefault">What this code will do is replace every space between words with a comma and end the line with an "!". The way these can be optional is because they have default values built in to the function.
             <br>The default value for the sep keyword is " " or a space. The default for the end keyword is a "\n". What's that you ask?
         </p>
     </BaseSection>
 
-    <BaseSection title="Special Characters" yPos="2xl:top-[87.5rem] md:top-[96rem]">
+    <BaseSection title="Special Characters" yPos="2xl:top-[87.5rem] md:top-[99rem]">
         <p>Special characters are characters that let you do fun things like new lines and add tabs right in the print function without having a million spaces or print functions. Here they are:</p>
         <div class="grid-cols-3 grid-rows-5 defaultGrid">
             <span class="leftItem topItem">Special character:</span>
@@ -238,32 +228,32 @@
         <p class="pDefault">As I'm sure you've noticed, all of these special characters begin with a backslash "\" which is why we need a special character for that so Python doesn't get confused.
             <br>This is also why we need a special character for a qoute or double qoute, so we don't confuse Python into thinking we have nothing else to output. Here's some examples to look at:
         </p>
-        <div class="flex space-x-4 pt-1">
-            <div class="codeBox">
+        <div class="flex space-x-4 items-center">
+            <CodeBox text='print("Hello \n World!")'>
                 <p class="italic text-sky-400">print</p>
                 <p class="text-pink-500">(</p>
                 <p class="text-emerald-400">"Hello&nbsp;</p>
                 <p class="italic text-sky-400">\n</p>
                 <p class="text-emerald-400">&nbsp;World!"</p>
                 <p class="text-pink-500">)</p>
-            </div>
-            <div class="codeBox">
+            </CodeBox>
+            <CodeBox text='print("Hello \t World!")'>
                 <p class="italic text-sky-400">print</p>
                 <p class="text-pink-500">(</p>
                 <p class="text-emerald-400">"Hello&nbsp;</p>
                 <p class="italic text-sky-400">\t</p>
                 <p class="text-emerald-400">&nbsp;World!"</p>
                 <p class="text-pink-500">)</p>
-            </div>
-            <div class="codeBox">
+            </CodeBox>
+            <CodeBox text='print("This is a backslash: \\")'>
                 <p class="italic text-sky-400">print</p>
                 <p class="text-pink-500">(</p>
                 <p class="text-emerald-400">"This is a backslash:&nbsp;</p>
                 <p class="italic text-sky-400">\\</p>
                 <p class="text-emerald-400">"</p>
                 <p class="text-pink-500">)</p>
-            </div>
-            <div class="codeBox">
+            </CodeBox>
+            <CodeBox text='print("Hello \"World!\"")'>
                 <p class="italic text-sky-400">print</p>
                 <p class="text-pink-500">(</p>
                 <p class="text-emerald-400">"Hello&nbsp;</p>
@@ -272,11 +262,11 @@
                 <p class="italic text-sky-400">\"</p>
                 <p class="text-emerald-400">"</p>
                 <p class="text-pink-500">)</p>
-            </div>
+            </CodeBox>
         </div>
     </BaseSection>
 
-    <BaseSection title="Closing Words" yPos="2xl:top-[108.75rem] md:top-[116.75rem]">
+    <BaseSection title="Closing Words" yPos="2xl:top-[108.75rem] md:top-[119.75rem]">
         <p class="pDefault">Now you should be a pro at using the Python print function and should be able to help your fellow python devs on their journey to becoming better programmers.
             <br>I hope this article helped you out a little bit, if it did please share it with other people. If you have problems with it please share your thoughts with me, I'd love to make this better for you guys.
         </p>

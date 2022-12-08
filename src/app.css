@@ -11,7 +11,6 @@ body{
     .sideHeader{ @apply text-center flex space-x-2 justify-center p-2 border-b-2 border-gray-50 dark:border-gray-800 }
     .sideH2{ @apply font-bold text-2xl }
     .sideH3{ @apply font-semibold text-xl }
-    .codeBox{ @apply bg-gray-900 dark:bg-gray-300 max-w-max px-6 rounded-md flex drop-shadow-sm tracking-wider h-fit }
 
     .defaultBox{ @apply flex w-screen place-content-center 2xl:max-w-[88.5rem] xl:max-w-[72.5rem] lg:max-w-[56.5rem] md:max-w-[40.5rem] sm:max-w-[32.5rem] justify-self-center}
     .pDefault{ @apply p-1 text-center }

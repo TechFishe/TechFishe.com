@@ -76,3 +76,6 @@
     </div>
     <slot />
 </div>
+<!-- <div class="w-screen h-fit border-t-2 py-2 absolute bottom-0">
+    <p class="text-xs pr-4 text-right">Copyright(c) TechFishe 2022</p>
+</div> -->
