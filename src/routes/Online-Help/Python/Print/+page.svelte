@@ -3,6 +3,8 @@
     import CodeBox from '../../../lib/containers/codeBox.svelte';
     import MultiCodeBox from '../../../lib/containers/multiCodeBox.svelte';
 
+    import { isOpen } from '../../../store.js';
+
     export const prerender = true;
 </script>
 
@@ -10,13 +12,12 @@
     <title>TechFishe.com | Python Print</title>
 </svelte:head>
 
-<main class="defaultBox mx-4 snap-y snap-mandatory">
-    <div class="absolute top-16">
-        <h1 class="text-center text-3xl font-bold tracking-wide">Python: Print</h1>
-        <p>After reading this page you will become a pro at using the print function in Python</p>
-    </div>
+<main class:pl-[19.75rem]="{$isOpen === true}" class:pl-16="{$isOpen === false}" class="place-content-center mt-[3.5rem] h-fit flex-col w-screen snap-y snap-mandatory transition-all duration-700 ease-in-out debugBorder">
+    <BaseSection title="Python: Print">
+        <p class="pDefault">After reading this page you will become a pro at using the print function in Python</p>
+    </BaseSection>
     
-    <BaseSection title="Intro" yPos="top-32">
+    <BaseSection title="Intro">
         <p class="pDefault">The built-in Python print function is a function who's sole purpose is to write a new line to the terminal every time it's called. How it works is a lot less important, rather this page will teach you how to use it like a pro.
             <br>The print function can take a max of 5 arguments when called, however only the first is required.
         </p>
@@ -66,7 +67,7 @@
         </div>
     </BaseSection>
 
-    <BaseSection title="Typecasting" yPos="2xl:top-[37rem] md:top-[39rem]">
+    <BaseSection title="Typecasting">
         <p class="pDefault">Ok we need to talk about type casting in Python really quick because it sucks. So in Python when you print something you need to be using objects of the same type (strings, numbers, booleans, etc).
             <br>So when you use the print function one thing you can do to print a string and a number together is to typecast the number into a string like this:
         </p>
@@ -145,7 +146,7 @@
         </p>
     </BaseSection>
 
-    <BaseSection title="F-strings" yPos="2xl:top-[67rem] md:top-[73.5rem]">
+    <BaseSection title="F-strings">
         <p class="pDefault">Forget all your troubles by using Python F-strings if you plan on using variables. Python F-strings allow you to imbed your variables right into the string without using a million + symbols. Let me show you!</p>
         <div class="flex space-x-4">
             <MultiCodeBox>
@@ -190,7 +191,7 @@
         </p>
     </BaseSection>
 
-    <BaseSection title="The Final 2 Arguments" yPos="2xl:top-[78.5rem] md:top-[86.75rem]">
+    <BaseSection title="The Final 2 Arguments">
         <p class="pDefault">The final 2 argument that we care about today are the sep and end arguments. These argument are added after all your text with a comma and then the sep and/or end keyword followed by an =''. Like this:</p>
         <CodeBox text='print("Hello world", sep=",", end="!")'>
             <p class="italic text-sky-400">print</p>
@@ -211,7 +212,7 @@
         </p>
     </BaseSection>
 
-    <BaseSection title="Special Characters" yPos="2xl:top-[87.5rem] md:top-[99rem]">
+    <BaseSection title="Special Characters">
         <p>Special characters are characters that let you do fun things like new lines and add tabs right in the print function without having a million spaces or print functions. Here they are:</p>
         <div class="grid-cols-3 grid-rows-5 defaultGrid">
             <span class="leftItem topItem">Special character:</span>
@@ -266,7 +267,7 @@
         </div>
     </BaseSection>
 
-    <BaseSection title="Closing Words" yPos="2xl:top-[108.75rem] md:top-[119.75rem]">
+    <BaseSection title="Closing Words">
         <p class="pDefault">Now you should be a pro at using the Python print function and should be able to help your fellow python devs on their journey to becoming better programmers.
             <br>I hope this article helped you out a little bit, if it did please share it with other people. If you have problems with it please share your thoughts with me, I'd love to make this better for you guys.
         </p>
