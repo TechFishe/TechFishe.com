@@ -8,7 +8,7 @@
 </script>
 
 <svelte:head>
-    <title>Python Vars</title>
+    <title>TechFishe.com | Python Vars</title>
 </svelte:head>
 
 <Main>
