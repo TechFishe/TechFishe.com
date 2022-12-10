@@ -1,7 +1,10 @@
 <script lang="ts">
-    import BaseSection from '../../../lib/text/baseSection.svelte';
-    import CodeBox from '../../../lib/containers/codeBox.svelte';
-    import MultiCodeBox from '../../../lib/containers/multiCodeBox.svelte';
+    import BaseSection from '$lib/containers/baseSection.svelte';
+    import CodeBox from '$lib/containers/codeBox.svelte';
+    import MultiCodeBox from '$lib/containers/multiCodeBox.svelte';
+    import Main from '$lib/containers/main.svelte';
+
+    import { isOpen } from '../../../../store.js';
 
     export const prerender = true;
 </script>
@@ -10,13 +13,12 @@
     <title>TechFishe.com | Python Print</title>
 </svelte:head>
 
-<main class="defaultBox mx-4 snap-y snap-mandatory">
-    <div class="absolute top-16">
-        <h1 class="text-center text-3xl font-bold tracking-wide">Python: Print</h1>
-        <p>After reading this page you will become a pro at using the print function in Python</p>
-    </div>
+<Main>
+    <BaseSection title="Python: Print" important={true}>
+        <p class="pDefault">After reading this page you will become a pro at using the print function in Python</p>
+    </BaseSection>
     
-    <BaseSection title="Intro" yPos="top-32">
+    <BaseSection title="Intro">
         <p class="pDefault">The built-in Python print function is a function who's sole purpose is to write a new line to the terminal every time it's called. How it works is a lot less important, rather this page will teach you how to use it like a pro.
             <br>The print function can take a max of 5 arguments when called, however only the first is required.
         </p>
@@ -34,8 +36,8 @@
             <span class="leftItem">flush</span>
             <span class="rightItem1 gridBorder">Optional. A Boolean, specifying if the output is flushed (True) or buffered (False). Default is False</span>
         </div>
-        <div class="grid justify-items-center w-[75rem]">
-            <p class="py-1">Let me explain these further. As you can see, the only required argument is the object(s) argument. This will be where your strings or numbers go like this:</p>
+        <div class="grid justify-items-center">
+            <p class="pDefault">Let me explain these further. As you can see, the only required argument is the object(s) argument. This will be where your strings or numbers go like this:</p>
             <CodeBox text='print("Hello world!");'>
                 <p class="italic text-sky-400">print</p>
                 <p class="italic text-pink-500">(</p>
@@ -66,7 +68,7 @@
         </div>
     </BaseSection>
 
-    <BaseSection title="Typecasting" yPos="2xl:top-[37rem] md:top-[39rem]">
+    <BaseSection title="Typecasting">
         <p class="pDefault">Ok we need to talk about type casting in Python really quick because it sucks. So in Python when you print something you need to be using objects of the same type (strings, numbers, booleans, etc).
             <br>So when you use the print function one thing you can do to print a string and a number together is to typecast the number into a string like this:
         </p>
@@ -145,7 +147,7 @@
         </p>
     </BaseSection>
 
-    <BaseSection title="F-strings" yPos="2xl:top-[67rem] md:top-[73.5rem]">
+    <BaseSection title="F-strings">
         <p class="pDefault">Forget all your troubles by using Python F-strings if you plan on using variables. Python F-strings allow you to imbed your variables right into the string without using a million + symbols. Let me show you!</p>
         <div class="flex space-x-4">
             <MultiCodeBox>
@@ -190,7 +192,7 @@
         </p>
     </BaseSection>
 
-    <BaseSection title="The Final 2 Arguments" yPos="2xl:top-[78.5rem] md:top-[86.75rem]">
+    <BaseSection title="The Final 2 Arguments">
         <p class="pDefault">The final 2 argument that we care about today are the sep and end arguments. These argument are added after all your text with a comma and then the sep and/or end keyword followed by an =''. Like this:</p>
         <CodeBox text='print("Hello world", sep=",", end="!")'>
             <p class="italic text-sky-400">print</p>
@@ -211,8 +213,8 @@
         </p>
     </BaseSection>
 
-    <BaseSection title="Special Characters" yPos="2xl:top-[87.5rem] md:top-[99rem]">
-        <p>Special characters are characters that let you do fun things like new lines and add tabs right in the print function without having a million spaces or print functions. Here they are:</p>
+    <BaseSection title="Special Characters">
+        <p class="pDefault">Special characters are characters that let you do fun things like new lines and add tabs right in the print function without having a million spaces or print functions. Here they are:</p>
         <div class="grid-cols-3 grid-rows-5 defaultGrid">
             <span class="leftItem topItem">Special character:</span>
             <span class="rightItem3 topItem gridBorder">What they do:</span>
@@ -228,7 +230,7 @@
         <p class="pDefault">As I'm sure you've noticed, all of these special characters begin with a backslash "\" which is why we need a special character for that so Python doesn't get confused.
             <br>This is also why we need a special character for a qoute or double qoute, so we don't confuse Python into thinking we have nothing else to output. Here's some examples to look at:
         </p>
-        <div class="flex space-x-4 items-center">
+        <div class:sm:flex="{$isOpen === false}" class:wideBox="{$isOpen === true}" class="space-x-4 items-center">
             <CodeBox text='print("Hello \n World!")'>
                 <p class="italic text-sky-400">print</p>
                 <p class="text-pink-500">(</p>
@@ -266,15 +268,17 @@
         </div>
     </BaseSection>
 
-    <BaseSection title="Closing Words" yPos="2xl:top-[108.75rem] md:top-[119.75rem]">
+    <BaseSection title="Closing Words">
         <p class="pDefault">Now you should be a pro at using the Python print function and should be able to help your fellow python devs on their journey to becoming better programmers.
             <br>I hope this article helped you out a little bit, if it did please share it with other people. If you have problems with it please share your thoughts with me, I'd love to make this better for you guys.
         </p>
     </BaseSection>
-</main>
+</Main>
 
 <style>
     .rightItem1{ @apply col-span-4 border-l p-1 }
     .rightItem2{ @apply col-span-6 border-l p-1 }
     .rightItem3{ @apply col-span-2 border-l p-1 }
+
+    .wideBox{ @apply 2xl:flex grid lg:grid-cols-2 grid-cols-1 lg:grid-rows-2 grid-rows-1 }
 </style>

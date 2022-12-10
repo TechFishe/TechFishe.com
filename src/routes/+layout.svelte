@@ -1,8 +1,10 @@
 <script lang="ts">
     import { browser } from "$app/environment";
     import "../app.css";
-    import SideButton from "./lib/btns/sideBtn.svelte";
-    import SideMenu from "./lib/containers/sideMenu.svelte";
+    import SideButton from "../lib/btns/sideBtn.svelte";
+    import SideMenu from "../lib/containers/sideMenu.svelte";
+
+    import { isOpen } from "../store";
 
     let isDark:boolean = false, isMainOpen:boolean = true, isOnHelp:boolean = false, isPyOpen:boolean = false;
     if (browser){
@@ -20,6 +22,11 @@
         localStorage.setItem('theme', isDark ? 'dark' : 'light');
 
         isDark ? document.documentElement.classList.add("dark") : document.documentElement.classList.remove("dark");
+    }
+
+    function menu(){
+        isMainOpen = !isMainOpen
+        $isOpen = isMainOpen;
     }
 </script>
 
@@ -57,12 +64,13 @@
             <SideButton URL="/About" MSG="About Page" val="About" SVG="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
             <SideButton MSG="Online Help" type="menu" val="OnHelp" SVG="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" on:click={()=> isOnHelp = !isOnHelp}/>
         </div>
-        <div class="w-60 z-50 absolute grid grid-cols-1 justify-center self-end pb-4">
+        <div class="w-60 z-50 absolute grid grid-cols-1 justify-center self-end pb-8">
             <h2 class="sideHeader sideH2">Links</h2>
             <SideButton URL="https://github.com/TechFishe/TechFishe.com-2.0" extra="hover:text-orange-600 transition-colors duration-150 ease-in" isSelf="false" MSG="Source Code" SVG="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/>
             <SideButton URL="https://www.w3schools.com/" extra="hover:text-green-600 transition-colors duration-150 ease-in" isSelf="false" MSG="w3 Schools" SVG="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/>
         </div>
-        <button class:left-64="{isMainOpen === true}" class:left-[17rem]="{isMainOpen === false}" class="rotate-90 left-64 absolute animate-bounce-side top-2/4 flex p-2 rounded-full text-gray-50/90 dark:text-gray-800/90 hover:text-fuchsia-500/95 dark:hover:text-fuchsia-500/95 hover:bg-gray-700/50 dark:hover:bg-gray-300/50 hover:shadow-md dark:shadow-gray-600/50 transition ease-in-out" on:click={() => isMainOpen = !isMainOpen}>
+        <p class="text-xs text-fuchsia-500 pb-2 pl-2 self-end w-60 flex items-center">Copyright (c) TechFishe 2022 <img src="/biFlag.png" alt="Bi Flag" class="w-9 h-6 ml-2"></p>
+        <button class:left-64="{isMainOpen === true}" class:left-[17rem]="{isMainOpen === false}" class="rotate-90 left-64 absolute animate-bounce-side top-2/4 flex p-2 rounded-full text-gray-50/90 dark:text-gray-800/90 hover:text-fuchsia-500/95 dark:hover:text-fuchsia-500/95 hover:bg-gray-700/50 dark:hover:bg-gray-300/50 hover:shadow-md dark:shadow-gray-600/50 transition ease-in-out" on:click={menu}>
             {#if isMainOpen === true}
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 9l-3 3m0 0l3 3m-3-3h7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
