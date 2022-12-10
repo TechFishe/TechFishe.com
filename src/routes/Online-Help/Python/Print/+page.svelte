@@ -1,5 +1,5 @@
 <script lang="ts">
-    import BaseSection from '../../../../lib/text/baseSection.svelte';
+    import BaseSection from '../../../../lib/containers/baseSection.svelte';
     import CodeBox from '../../../../lib/containers/codeBox.svelte';
     import MultiCodeBox from '../../../../lib/containers/multiCodeBox.svelte';
     import Main from '../../../../lib/containers/main.svelte';
@@ -14,7 +14,7 @@
 </svelte:head>
 
 <Main>
-    <BaseSection title="Python: Print">
+    <BaseSection title="Python: Print" important={true}>
         <p class="pDefault">After reading this page you will become a pro at using the print function in Python</p>
     </BaseSection>
     
@@ -230,7 +230,7 @@
         <p class="pDefault">As I'm sure you've noticed, all of these special characters begin with a backslash "\" which is why we need a special character for that so Python doesn't get confused.
             <br>This is also why we need a special character for a qoute or double qoute, so we don't confuse Python into thinking we have nothing else to output. Here's some examples to look at:
         </p>
-        <div class:lg:flex="{$isOpen === false}" class:wideBox="{$isOpen === true}" class="space-x-4 items-center">
+        <div class:sm:flex="{$isOpen === false}" class:wideBox="{$isOpen === true}" class="space-x-4 items-center">
             <CodeBox text='print("Hello \n World!")'>
                 <p class="italic text-sky-400">print</p>
                 <p class="text-pink-500">(</p>
