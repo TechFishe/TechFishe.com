@@ -1,5 +1,5 @@
 <script>
-    import { page } from '../store.js';
+    import { page } from '../../store.js';
     page.set("About")
 
     export const prerender = true;

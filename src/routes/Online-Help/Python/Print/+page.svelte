@@ -1,9 +1,10 @@
 <script lang="ts">
-    import BaseSection from '../../../lib/text/baseSection.svelte';
-    import CodeBox from '../../../lib/containers/codeBox.svelte';
-    import MultiCodeBox from '../../../lib/containers/multiCodeBox.svelte';
+    import BaseSection from '../../../../lib/text/baseSection.svelte';
+    import CodeBox from '../../../../lib/containers/codeBox.svelte';
+    import MultiCodeBox from '../../../../lib/containers/multiCodeBox.svelte';
+    import Main from '../../../../lib/containers/main.svelte';
 
-    import { isOpen } from '../../../store.js';
+    import { isOpen } from '../../../../store.js';
 
     export const prerender = true;
 </script>
@@ -12,7 +13,7 @@
     <title>TechFishe.com | Python Print</title>
 </svelte:head>
 
-<main class:pl-[19.75rem]="{$isOpen === true}" class:pl-16="{$isOpen === false}" class="place-content-center mt-[3.5rem] h-fit flex-col w-screen snap-y snap-mandatory transition-all duration-700 ease-in-out debugBorder">
+<Main>
     <BaseSection title="Python: Print">
         <p class="pDefault">After reading this page you will become a pro at using the print function in Python</p>
     </BaseSection>
@@ -35,8 +36,8 @@
             <span class="leftItem">flush</span>
             <span class="rightItem1 gridBorder">Optional. A Boolean, specifying if the output is flushed (True) or buffered (False). Default is False</span>
         </div>
-        <div class="grid justify-items-center w-[75rem]">
-            <p class="py-1">Let me explain these further. As you can see, the only required argument is the object(s) argument. This will be where your strings or numbers go like this:</p>
+        <div class="grid justify-items-center">
+            <p class="pDefault">Let me explain these further. As you can see, the only required argument is the object(s) argument. This will be where your strings or numbers go like this:</p>
             <CodeBox text='print("Hello world!");'>
                 <p class="italic text-sky-400">print</p>
                 <p class="italic text-pink-500">(</p>
@@ -213,7 +214,7 @@
     </BaseSection>
 
     <BaseSection title="Special Characters">
-        <p>Special characters are characters that let you do fun things like new lines and add tabs right in the print function without having a million spaces or print functions. Here they are:</p>
+        <p class="pDefault">Special characters are characters that let you do fun things like new lines and add tabs right in the print function without having a million spaces or print functions. Here they are:</p>
         <div class="grid-cols-3 grid-rows-5 defaultGrid">
             <span class="leftItem topItem">Special character:</span>
             <span class="rightItem3 topItem gridBorder">What they do:</span>
@@ -229,7 +230,7 @@
         <p class="pDefault">As I'm sure you've noticed, all of these special characters begin with a backslash "\" which is why we need a special character for that so Python doesn't get confused.
             <br>This is also why we need a special character for a qoute or double qoute, so we don't confuse Python into thinking we have nothing else to output. Here's some examples to look at:
         </p>
-        <div class="flex space-x-4 items-center">
+        <div class:lg:flex="{$isOpen === false}" class:wideBox="{$isOpen === true}" class="space-x-4 items-center">
             <CodeBox text='print("Hello \n World!")'>
                 <p class="italic text-sky-400">print</p>
                 <p class="text-pink-500">(</p>
@@ -272,10 +273,12 @@
             <br>I hope this article helped you out a little bit, if it did please share it with other people. If you have problems with it please share your thoughts with me, I'd love to make this better for you guys.
         </p>
     </BaseSection>
-</main>
+</Main>
 
 <style>
     .rightItem1{ @apply col-span-4 border-l p-1 }
     .rightItem2{ @apply col-span-6 border-l p-1 }
     .rightItem3{ @apply col-span-2 border-l p-1 }
+
+    .wideBox{ @apply 2xl:flex grid lg:grid-cols-2 grid-cols-1 lg:grid-rows-2 grid-rows-1 }
 </style>

@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { page } from './store.js';
+    import { page } from '../store.js';
     page.set("Home")
 
     let count: number = 0;

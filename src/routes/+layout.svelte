@@ -1,10 +1,10 @@
 <script lang="ts">
     import { browser } from "$app/environment";
     import "../app.css";
-    import SideButton from "./lib/btns/sideBtn.svelte";
-    import SideMenu from "./lib/containers/sideMenu.svelte";
+    import SideButton from "../lib/btns/sideBtn.svelte";
+    import SideMenu from "../lib/containers/sideMenu.svelte";
 
-    import { isOpen } from "./store";
+    import { isOpen } from "../store";
 
     let isDark:boolean = false, isMainOpen:boolean = true, isOnHelp:boolean = false, isPyOpen:boolean = false;
     if (browser){
