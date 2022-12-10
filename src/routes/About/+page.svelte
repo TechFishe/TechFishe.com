@@ -1,4 +1,7 @@
 <script>
+    import Main from '$lib/containers/main.svelte';
+    import BaseSection from '$lib/containers/baseSection.svelte';
+
     import { page } from '../../store.js';
     page.set("About")
 
@@ -9,9 +12,8 @@
     <title>TechFishe.com | About</title>
 </svelte:head>
 
-<main class="defaultBox">
-    <div class="absolute top-16">
-        <h1 class="text-3xl font-bold tracking-wide text-center">About!</h1>
+<Main>
+    <BaseSection title="About!" important={true}>
         <h3 class="text-2xl p-2 font-semibold tracking-wide">About me</h3>
-    </div>
-</main>
+    </BaseSection>
+</Main>

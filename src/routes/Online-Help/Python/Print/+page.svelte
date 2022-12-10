@@ -1,8 +1,8 @@
 <script lang="ts">
-    import BaseSection from '../../../../lib/containers/baseSection.svelte';
-    import CodeBox from '../../../../lib/containers/codeBox.svelte';
-    import MultiCodeBox from '../../../../lib/containers/multiCodeBox.svelte';
-    import Main from '../../../../lib/containers/main.svelte';
+    import BaseSection from '$lib/containers/baseSection.svelte';
+    import CodeBox from '$lib/containers/codeBox.svelte';
+    import MultiCodeBox from '$lib/containers/multiCodeBox.svelte';
+    import Main from '$lib/containers/main.svelte';
 
     import { isOpen } from '../../../../store.js';
 
