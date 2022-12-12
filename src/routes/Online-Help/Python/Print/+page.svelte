@@ -46,7 +46,7 @@
             </CodeBox>
             <p class="py-1">And when you chain multiple objects together in one print statement you use the "+" or "," character like this:</p>
             <div class="flex space-x-4 items-center">
-                <CodeBox>
+                <CodeBox text='print("Hello " + "World")'>
                     <p class="italic text-sky-400">print</p>
                     <p class="italic text-pink-500">(</p>
                     <p class="text-emerald-400">"Hello "</p>
@@ -55,7 +55,7 @@
                     <p class="italic text-pink-500">)</p>
                 </CodeBox>
                 <p>Or</p>
-                <CodeBox>
+                <CodeBox text='print("Hello ", "World")'>
                     <p class="italic text-sky-400">print</p>
                     <p class="italic text-pink-500">(</p>
                     <p class="text-emerald-400">"Hello "</p>
