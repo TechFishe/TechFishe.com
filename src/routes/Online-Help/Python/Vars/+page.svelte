@@ -22,9 +22,9 @@
         </p>
         <div class="defaultGrid grid-cols-4 grid-rows-6">
             <span class="topItem leftItem">Data types:</span>
-            <span class="topItem rightItem1">What they mean:</span>
+            <span class="topItem rightItem1 gridBorder">What they mean:</span>
             <span class="leftItem border-t">string</span>
-            <span class="rightItem1 border-t">Held inside of qoutes or double qoutes, acts like a sentence</span>
+            <span class="rightItem1 border-t gridBorder">Held inside of qoutes or double qoutes, acts like a sentence</span>
         </div>
     </BaseSection>
 </Main>

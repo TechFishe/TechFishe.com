@@ -14,7 +14,7 @@
 
 <Main>
     <BaseSection title="Welcome!" important={true}>
-        <p class="p-1">Welcome to my portfolio website! Made with love and care in SvelteKit using TailWindCSS</p>
+        <p class="p-1">Welcome to my portfolio website! Made with love and care in <a href="http://kit.svelte.dev" target="_blank" rel="noopener noreferrer" class="underline hover:text-orange-400 transition-colors duration-150 ease-in">SvelteKit</a> using <a href="http://tailwindcss.com" target="_blank" rel="noopener noreferrer" class="underline hover:text-cyan-400 transition-colors duration-150 ease-in">Tailwind CSS</a></p>
     </BaseSection>
     <div class="grid justify-items-center">
         <button class="text-gray-50 flex space-x-1 justify-center bg-fuchsia-500 rounded-md py-2 px-10 text-lg shadow-md shadow-fuchsia-500/50 hover:shadow-lg hover:bg-fuchsia-600 hover:shadow-fuchsia-600/50 hover:scale-105 transition ease-in-out" on:click={() => count++}>
