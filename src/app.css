@@ -18,4 +18,6 @@ body{
     .topItem{ @apply text-xl font-semibold border-b border-gray-50 dark:border-gray-700 }
     .leftItem{ @apply col-span-1 border-r border-gray-50 dark:border-gray-700 p-1 }
     .gridBorder{ @apply border-gray-50 dark:border-gray-700 }
+
+    .textLink{ @apply underline transition-colors duration-150 ease-in}
 }

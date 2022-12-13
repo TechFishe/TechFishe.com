@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
     import BaseSection from '$lib/containers/baseSection.svelte';
     import CodeBox from '$lib/containers/codeBox.svelte';
     import MultiCodeBox from '$lib/containers/multiCodeBox.svelte';
