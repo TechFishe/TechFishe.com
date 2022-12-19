@@ -13,7 +13,10 @@
 </svelte:head>
 
 <Main>
-    <BaseSection title="About!" important={true}>
-        <h3 class="text-2xl p-2 font-semibold tracking-wide">About me</h3>
+    <BaseSection title="About" important={true}>
+        <p>Get to know me and this site a little bit better!</p>
+    </BaseSection>
+    <BaseSection title="About me">
+        <p>Hello</p>
     </BaseSection>
 </Main>
