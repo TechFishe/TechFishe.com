@@ -3,3 +3,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.debug{
+    border-width: 1px;
+    border-color: rgb(249 115 22);
+}
